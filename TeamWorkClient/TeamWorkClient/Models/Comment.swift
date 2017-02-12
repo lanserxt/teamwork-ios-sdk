@@ -13,52 +13,49 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Comment: Model {
-	public var projectId : Int?
-	public var attachments_count : Int?
+	public var projectId : String?
+	public var attachmentsCount : Int?
 	public var authorLastname : String?
 	public var commentableId : Int?
-	public var commentable_type : String?
+	public var commentableType : String?
 	public var emailedFrom : String?
 	public var isRead : Int?
 	public var privateValue : Int?
 	public var lockdownId : String?
 	public var datetime : String?
 	public var authorAvatarUrl : String?
-	public var author_id : Int?
-	public var id : Int?
+	public var authorId : String?
+	public var id : String?
 	public var companyName : String?
 	public var lastChangedOn : String?
 	public var contentType : String?
 	public var nrNotifiedPeople : Int?
 	public var type : String?
 	public var itemName : String?
-	public var attachmentsCount : Int?
-	public var companyId : Int?
+	public var companyId : String?
 	public var htmlBody : String?
 	public var projectName : String?
 	public var body : String?
 	public var commentNo : Int?
 	public var authorFirstname : String?
 	public var commentLink : String?
-	public var authorId : Int?
 
     required public init?(dictionary: NSDictionary) {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? Int
-		attachments_count = dictionary["attachments_count"] as? Int
+		projectId = dictionary["project-id"] as? String
 		authorLastname = dictionary["author-lastname"] as? String
 		commentableId = dictionary["commentable-id"] as? Int
-		commentable_type = dictionary["commentable_type"] as? String
+		commentableType = dictionary["commentable_type"] as? String
 		emailedFrom = dictionary["emailed-from"] as? String
 		isRead = dictionary["isRead"] as? Int
 		privateValue = dictionary["private"] as? Int
 		lockdownId = dictionary["lockdown-id"] as? String
 		datetime = dictionary["datetime"] as? String
 		authorAvatarUrl = dictionary["author-avatar-url"] as? String
-		author_id = dictionary["author_id"] as? Int
-		id = dictionary["id"] as? Int
+		authorId = dictionary["author_id"] as? String
+		id = dictionary["id"] as? String
 		companyName = dictionary["company-name"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		contentType = dictionary["content-type"] as? String
@@ -66,14 +63,13 @@ public class Comment: Model {
 		type = dictionary["type"] as? String
 		itemName = dictionary["item-name"] as? String
 		attachmentsCount = dictionary["attachments-count"] as? Int
-		companyId = dictionary["company-id"] as? Int
+		companyId = dictionary["company-id"] as? String
 		htmlBody = dictionary["html-body"] as? String
 		projectName = dictionary["project-name"] as? String
 		body = dictionary["body"] as? String
 		commentNo = dictionary["commentNo"] as? Int
 		authorFirstname = dictionary["author-firstname"] as? String
 		commentLink = dictionary["comment-link"] as? String
-		authorId = dictionary["author-id"] as? Int
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {
@@ -81,17 +77,16 @@ public class Comment: Model {
 		let dictionary = NSMutableDictionary()
 
 		dictionary.setValue(self.projectId, forKey: "project-id")
-		dictionary.setValue(self.attachments_count, forKey: "attachments_count")
 		dictionary.setValue(self.authorLastname, forKey: "author-lastname")
 		dictionary.setValue(self.commentableId, forKey: "commentable-id")
-		dictionary.setValue(self.commentable_type, forKey: "commentable_type")
+		dictionary.setValue(self.commentableType, forKey: "commentable_type")
 		dictionary.setValue(self.emailedFrom, forKey: "emailed-from")
 		dictionary.setValue(self.isRead, forKey: "isRead")
 		dictionary.setValue(self.privateValue, forKey: "private")
 		dictionary.setValue(self.lockdownId, forKey: "lockdown-id")
 		dictionary.setValue(self.datetime, forKey: "datetime")
 		dictionary.setValue(self.authorAvatarUrl, forKey: "author-avatar-url")
-		dictionary.setValue(self.author_id, forKey: "author_id")
+		dictionary.setValue(self.authorId, forKey: "author_id")
 		dictionary.setValue(self.id, forKey: "id")
 		dictionary.setValue(self.companyName, forKey: "company-name")
 		dictionary.setValue(self.lastChangedOn, forKey: "last-changed-on")

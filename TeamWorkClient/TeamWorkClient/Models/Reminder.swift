@@ -22,9 +22,9 @@ public class Reminder: Model{
 	public var dateTimeUtc : String?
 	public var createdByUserId : Int?
 	public var createdByUserLastname : String?
-	public var userId : Int?
-	public var taskId : Int?
-	public var id : Int?
+	public var userId : String?
+	public var taskId : String?
+	public var id : String?
 	public var type : String?
 
     public required init?(dictionary: NSDictionary) {
@@ -40,9 +40,9 @@ public class Reminder: Model{
 		dateTimeUtc = dictionary["date-time-utc"] as? String
 		createdByUserId = dictionary["created-by-user-id"] as? Int
 		createdByUserLastname = dictionary["created-by-user-lastname"] as? String
-		userId = dictionary["user-id"] as? Int
-		taskId = dictionary["task-id"] as? Int
-		id = dictionary["id"] as? Int
+		userId = dictionary["user-id"] as? String
+		taskId = dictionary["task-id"] as? String
+		id = dictionary["id"] as? String
 		type = dictionary["type"] as? String
 	}
 

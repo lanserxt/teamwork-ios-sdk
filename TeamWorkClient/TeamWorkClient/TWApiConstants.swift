@@ -217,7 +217,7 @@ struct TWApiClientConstants
         static let getAllTemplatesTasklists = (path: "/tasklists/templates.json", rootElement: "tasklist");
         
         static let getTasks = (path: "/tasks.json", rootElement: "todo-items")
-        static let getTasksForProject = (path: "/tasks/%@/reminders.json", rootElement: "todo-items")
+        static let getTasksForProject = (path: "/projects/%@/tasks.json", rootElement: "todo-items")
         static let getTasksForTasklists = (path: "/tasklists/%@/tasks.json", rootElement: "todo-items")
         static let getTask = (path: "/tasks/%@.json?getFiles=%@&nestSubTasks=%@&includeCompletedSubtasks=%@", rootElement: "todo-item")
         static let getTaskDependecies = (path: "/tasks/%@/dependencies.json", rootElement: "dependents")

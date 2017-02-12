@@ -16,7 +16,7 @@ public class ProjectTimeTotals: Model {
 	public var company : Company?
 	public var timeEstimates : TimeEstimates?
 	public var name : String?
-	public var id : Int?
+	public var id : String?
 	public var timeTotals : TimeTotals?
 
 	required public init?(dictionary: NSDictionary) {
@@ -25,7 +25,7 @@ public class ProjectTimeTotals: Model {
 		if (dictionary["company"] != nil) { company = Company(dictionary: dictionary["company"] as! NSDictionary) }
 		if (dictionary["time-estimates"] != nil) { timeEstimates = TimeEstimates(dictionary: dictionary["time-estimates"] as! NSDictionary) }
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		if (dictionary["time-totals"] != nil) { timeTotals = TimeTotals(dictionary: dictionary["time-totals"] as! NSDictionary) }
 	}
 

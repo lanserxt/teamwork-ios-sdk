@@ -24,7 +24,7 @@ public class PersonDetails: Model {
 	public var userUUID : String?
 	public var privateNotes : String?
 	public var userName : String?
-	public var id : Int?
+	public var id : String?
 	public var companyName : String?
 	public var lastChangedOn : String?
 	public var phoneNumberOffice : String?
@@ -39,7 +39,7 @@ public class PersonDetails: Model {
 	public var imHandle : String?
 	public var createdAt : String?
 	public var phoneNumberOfficeExt : String?
-	public var companyId : Int?
+	public var companyId : String?
 	public var hasAccessToNewProjects : String?
 	public var phoneNumberFax : String?
 	public var avatarUrl : String?
@@ -64,7 +64,7 @@ public class PersonDetails: Model {
 		userUUID = dictionary["userUUID"] as? String
 		privateNotes = dictionary["private-notes"] as? String
 		userName = dictionary["user-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		companyName = dictionary["company-name"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		phoneNumberOffice = dictionary["phone-number-office"] as? String
@@ -79,7 +79,7 @@ public class PersonDetails: Model {
 		imHandle = dictionary["im-handle"] as? String
 		createdAt = dictionary["created-at"] as? String
 		phoneNumberOfficeExt = dictionary["phone-number-office-ext"] as? String
-		companyId = dictionary["company-id"] as? Int
+		companyId = dictionary["company-id"] as? String
 		hasAccessToNewProjects = dictionary["has-access-to-new-projects"] as? String
 		phoneNumberFax = dictionary["phone-number-fax"] as? String
 		avatarUrl = dictionary["avatar-url"] as? String

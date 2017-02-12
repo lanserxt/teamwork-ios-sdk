@@ -16,7 +16,7 @@ public class Role: Model {
 	public var users : Array<User>?
 	public var name : String?
 	public var description : String?
-	public var id : Int?
+	public var id : String?
     
 	required public init?(dictionary: NSDictionary) {
 		
@@ -24,7 +24,7 @@ public class Role: Model {
         if (dictionary["users"] != nil) { users = User.modelsFromDictionaryArray(array: dictionary["users"] as! NSArray) }
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

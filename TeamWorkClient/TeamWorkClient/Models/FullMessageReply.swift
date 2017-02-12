@@ -17,15 +17,14 @@ public class FullMessageReply: Model {
 	public var attachmentsCount : Int?
 	public var emailedFrom : String?
 	public var authorAvatarUrl : String?
-	public var author_id : Int?
+	public var authorId : String?
 	public var postedOn : String?
 	public var body : String?
 	public var attachments : Array<String>?
 	public var authorFirstname : String?
-	public var id : Int?
+	public var id : String?
 	public var lastChangedOn : String?
-	public var authorId : Int?
-	public var messageId : Int?
+	public var messageId : String?
 
     required public init?(dictionary: NSDictionary) {
         
@@ -35,15 +34,14 @@ public class FullMessageReply: Model {
 		attachmentsCount = dictionary["attachments-count"] as? Int
 		emailedFrom = dictionary["emailed-from"] as? String
 		authorAvatarUrl = dictionary["author-avatar-url"] as? String
-		author_id = dictionary["author_id"] as? Int
+		authorId = dictionary["author_id"] as? String
 		postedOn = dictionary["posted-on"] as? String
 		body = dictionary["body"] as? String
 		//if (dictionary["attachments"] != nil) { attachments = Attachments.modelsFromDictionaryArray(dictionary["attachments"] as! NSArray) }
 		authorFirstname = dictionary["author-firstname"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
-		authorId = dictionary["author-id"] as? Int
-		messageId = dictionary["messageId"] as? Int
+		messageId = dictionary["messageId"] as? String
 	}
 
 		
@@ -55,7 +53,7 @@ public class FullMessageReply: Model {
 		dictionary.setValue(self.attachmentsCount, forKey: "attachments-count")
 		dictionary.setValue(self.emailedFrom, forKey: "emailed-from")
 		dictionary.setValue(self.authorAvatarUrl, forKey: "author-avatar-url")
-		dictionary.setValue(self.author_id, forKey: "author_id")
+		dictionary.setValue(self.authorId, forKey: "author_id")
 		dictionary.setValue(self.postedOn, forKey: "posted-on")
 		dictionary.setValue(self.body, forKey: "body")
 		dictionary.setValue(self.authorFirstname, forKey: "author-firstname")

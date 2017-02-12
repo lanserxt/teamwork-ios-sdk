@@ -13,12 +13,12 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Dependent: Model {
-	public var responsiblePartyId : Int?
+	public var responsiblePartyId : String?
 	public var predecessorMust : String?
 	public var name : String?
-	public var id : Int?
+	public var id : String?
 	public var hardness : String?
-	public var projectId : Int?
+	public var projectId : String?
 	public var dependentCant : String?
 	public var responsiblePartySummary : String?
 	public var responsiblePartyNames : String?
@@ -26,12 +26,12 @@ public class Dependent: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		responsiblePartyId = dictionary["responsible-party-id"] as? Int
+		responsiblePartyId = dictionary["responsible-party-id"] as? String
 		predecessorMust = dictionary["predecessorMust"] as? String
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		hardness = dictionary["hardness"] as? String
-		projectId = dictionary["projectId"] as? Int
+		projectId = dictionary["projectId"] as? String
 		dependentCant = dictionary["dependentCant"] as? String
 		responsiblePartySummary = dictionary["responsible-party-summary"] as? String
 		responsiblePartyNames = dictionary["responsible-party-names"] as? String

@@ -13,25 +13,25 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Notebook: Model {
-	public var projectId : Int?
-	public var updatedByUserId : Int?
+	public var projectId : String?
+	public var updatedByUserId : String?
 	public var readCommentsCount : Int?
 	public var name : String?
 	public var description : String?
 	public var createdByUserfirstname : String?
 	public var commentsCount : Int?
-	public var versionId : Int?
+	public var versionId : String?
 	public var privateValue : Int?
 	public var lockdownId : String?
 	public var updatedByUserlastname : String?
 	public var updatedDate : String?
-	public var createdByUserId : Int?
+	public var createdByUserId : String?
 	public var createdByUserlastname : String?
-	public var categoryId : Int?
+	public var categoryId : String?
 	public var version : Int?
 	public var userDisplayUpdatedDate : String?
 	public var userDisplayUpdatedTime : String?
-	public var id : Int?
+	public var id : String?
 	public var nrComments : Int?
 	public var updatedByUserfirstname : String?
 	public var createdDate : String?
@@ -42,25 +42,25 @@ public class Notebook: Model {
 
         super.init(dictionary: dictionary)
         
-		projectId = dictionary["project-id"] as? Int
-		updatedByUserId = dictionary["updated-by-userId"] as? Int
+		projectId = dictionary["project-id"] as? String
+		updatedByUserId = dictionary["updated-by-userId"] as? String
 		readCommentsCount = dictionary["read-comments-count"] as? Int
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
 		createdByUserfirstname = dictionary["created-by-userfirstname"] as? String
 		commentsCount = dictionary["comments-count"] as? Int
-		versionId = dictionary["version-id"] as? Int
+		versionId = dictionary["version-id"] as? String
 		privateValue = dictionary["private"] as? Int
 		lockdownId = dictionary["lockdown-id"] as? String
 		updatedByUserlastname = dictionary["updated-by-userlastname"] as? String
 		updatedDate = dictionary["updated-date"] as? String
-		createdByUserId = dictionary["created-by-userId"] as? Int
+		createdByUserId = dictionary["created-by-userId"] as? String
 		createdByUserlastname = dictionary["created-by-userlastname"] as? String
-		categoryId = dictionary["category-id"] as? Int
+		categoryId = dictionary["category-id"] as? String
 		version = dictionary["version"] as? Int
 		userDisplayUpdatedDate = dictionary["user-display-updated-date"] as? String
 		userDisplayUpdatedTime = dictionary["user-display-updated-time"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		nrComments = dictionary["nr-comments"] as? Int
 		updatedByUserfirstname = dictionary["updated-by-userfirstname"] as? String
 		createdDate = dictionary["created-date"] as? String

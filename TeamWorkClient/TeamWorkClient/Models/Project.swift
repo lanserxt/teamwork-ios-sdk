@@ -24,10 +24,10 @@ public class Project: Model {
 	public var createdOn : String?
 	public var category : Category?
 	public var startPage : String?
-	public var startDate : Int?
+	public var startDate : String?
 	public var logo : String?
 	public var notifyeveryone : String?
-	public var id : Int?
+	public var id : String?
 	public var lastChangedOn : String?
 	public var endDate : Int?
 	public var harvestTimersEnabled : Bool?
@@ -47,10 +47,10 @@ public class Project: Model {
 		createdOn = dictionary["created-on"] as? String
 		if (dictionary["category"] != nil) { category = Category(dictionary: dictionary["category"] as! NSDictionary) }
 		startPage = dictionary["start-page"] as? String
-		startDate = dictionary["startDate"] as? Int
+		startDate = dictionary["startDate"] as? String
 		logo = dictionary["logo"] as? String
 		notifyeveryone = dictionary["notifyeveryone"] as? String
-		id = dictionary["id"] as? Int
+		id = unwrapIdValue(dictionary["id"])
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		endDate = dictionary["endDate"] as? Int
 		harvestTimersEnabled = dictionary["harvest-timers-enabled"] as? Bool

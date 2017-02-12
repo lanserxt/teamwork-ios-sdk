@@ -14,7 +14,7 @@ import Foundation
 
 public class Webhook: Model {
 	public var event : String?
-	public var id : Int?
+	public var id : String?
 	public var status : String?
 	public var url : String?
 	public var validated : Int?
@@ -24,7 +24,7 @@ public class Webhook: Model {
         super.init(dictionary: dictionary)
 
 		event = dictionary["event"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		status = dictionary["status"] as? String
 		url = dictionary["url"] as? String
 		validated = dictionary["validated"] as? Int

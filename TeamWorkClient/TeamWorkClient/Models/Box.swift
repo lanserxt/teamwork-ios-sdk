@@ -16,7 +16,7 @@ public class Box: Model {
 	public var folderAccess : String?
     public var folderName : String?
 	public var enabled : Int?
-	public var folderId : Int?
+	public var folderId : String?
 
 	required public init?(dictionary: NSDictionary) {
 
@@ -24,7 +24,7 @@ public class Box: Model {
         folderName = dictionary["folder-name"] as? String
 		folderAccess = dictionary["folder-access"] as? String
 		enabled = dictionary["enabled"] as? Int
-		folderId = dictionary["folder-id"] as? Int
+		folderId = dictionary["folder-id"] as? String
 	}
 		
 	public override func dictionaryRepresentation() -> NSDictionary {

@@ -13,16 +13,16 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Expense: Model {
-	public var invoiceId : Int?
+	public var invoiceId : String?
 	public var name : String?
 	public var createdByUserFirstname : String?
-	public var createdByUserId : Int?
+	public var createdByUserId : String?
 	public var descriptionValue : String?
 	public var createdByUserLastname : String?
 	public var date : Int?
-	public var id : Int?
-    public var projectId : Int?
-    public var companyId : Int?
+	public var id : String?
+    public var projectId : String?
+    public var companyId : String?
     public var companyName : String?
 	public var cost : Double?
 
@@ -32,16 +32,16 @@ public class Expense: Model {
 		super.init(dictionary: dictionary)
         
         companyName = dictionary["company-name"] as? String
-        companyId = dictionary["company-id"] as? Int
-        projectId = dictionary["project-id"] as? Int
-		invoiceId = dictionary["invoice-id"] as? Int
+        companyId = dictionary["company-id"] as? String
+        projectId = dictionary["project-id"] as? String
+		invoiceId = dictionary["invoice-id"] as? String
 		name = dictionary["name"] as? String
 		createdByUserFirstname = dictionary["created-by-user-firstname"] as? String
-		createdByUserId = dictionary["created-by-user-id"] as? Int
+		createdByUserId = dictionary["created-by-user-id"] as? String
 		descriptionValue = dictionary["description"] as? String
 		createdByUserLastname = dictionary["created-by-user-lastname"] as? String
 		date = dictionary["date"] as? Int
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		cost = dictionary["cost"] as? Double
 	}
 

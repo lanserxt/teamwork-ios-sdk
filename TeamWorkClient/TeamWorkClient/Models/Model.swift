@@ -31,6 +31,16 @@ public class Model{
         return [String:Any]() as NSDictionary
     }
     
+    public func unwrapIdValue(_ value: Any?) -> String{
+        guard value != nil else{
+            return ""
+        }
+        if (value is String){
+            return value as! String
+        }
+        return String.init(describing: value)
+    }
+    
     
     public class func modelsFromDictionaryArray<T: Model>(array:NSArray) -> [T]
     {

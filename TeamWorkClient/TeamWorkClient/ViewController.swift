@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    fileprivate let apiClient:TWApiClient = TWApiClient.init(url: "", token: "")
+    fileprivate let apiClient:TWApiClient = TWApiClient.init(url: "https://itgroup1.teamwork.com", token: "tank860cut")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +29,22 @@ class ViewController: UIViewController {
     }
 
     private func getProjects() {
-        apiClient.getAllProjects(urlParams: "status=ALL") { (success, code, projects, error) in
+        apiClient.getAllProjects(urlParams: "status=ALL") { [weak self] (success, code, projects, error) in
             for project: Project in projects!{
-                print("Name: \(project.name!)")
+                print("Name: \(project.name!) id: \(project.id!)")
+                self?.getTasksForProjectId(project.id!)
             }
         }
         
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func getTasksForProjectId(_ projectId: String){
+        
+        apiClient.getTasksForProject(projectId: projectId, urlParams: "", { (success, code, tasks, error) in
+            for task: TodoItem in tasks!{
+                print("Id: \(task.id!) content: \(task.content!)")
+            }
+        })
     }
 
-
 }
-

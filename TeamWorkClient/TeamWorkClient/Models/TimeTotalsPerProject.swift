@@ -17,7 +17,7 @@ public class TimeTotalsPerProject: Model {
 	public var name : String?
 	public var totalNonBillableMins : Int?
 	public var totalBillableMins : Int?
-	public var id : Int?
+	public var id : String?
 	public var totalMins : Int?
 
 	required public init?(dictionary: NSDictionary) {
@@ -27,7 +27,7 @@ public class TimeTotalsPerProject: Model {
 		name = dictionary["name"] as? String
 		totalNonBillableMins = dictionary["totalNonBillableMins"] as? Int
 		totalBillableMins = dictionary["totalBillableMins"] as? Int
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		totalMins = dictionary["totalMins"] as? Int
 	}
 

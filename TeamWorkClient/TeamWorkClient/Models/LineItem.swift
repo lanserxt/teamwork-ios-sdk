@@ -20,11 +20,11 @@ public class LineItem: Model {
 	public var decimalHours : Double?
 	public var description : String?
 	public var userLastname : String?
-	public var id : Int?
+	public var id : String?
 	public var userFirstname : String?
 	public var billable : Int?
 	public var taskName : String?
-	public var userId : Int?
+	public var userId : String?
 	public var taskId : String?
 	public var cost : Double?
 
@@ -38,11 +38,11 @@ public class LineItem: Model {
 		decimalHours = dictionary["decimal-hours"] as? Double
 		description = dictionary["description"] as? String
 		userLastname = dictionary["user-lastname"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		userFirstname = dictionary["user-firstname"] as? String
 		billable = dictionary["billable"] as? Int
 		taskName = dictionary["task-name"] as? String
-		userId = dictionary["user-id"] as? Int
+		userId = dictionary["user-id"] as? String
 		taskId = dictionary["task-id"] as? String
 		cost = dictionary["cost"] as? Double
 	}

@@ -13,8 +13,8 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Activity: Model {
-    public var projectId : Int?
-    public var itemId : Int?
+    public var projectId : String?
+    public var itemId : String?
     public var todoListName : String?
     public var fromUserAvatarUrl : String?
     public var descriptionValue : String?
@@ -28,20 +28,20 @@ public class Activity: Model {
     public var link : String?
     public var extraDescription : String?
     public var isPrivate : Int?
-    public var id : Int?
+    public var id : String?
     public var dueDate : Int?
     public var fromUsername : String?
     public var type : String?
     public var forUserAvatarUrl : String?
-    public var userId : Int?
+    public var userId : String?
     
     
     public required init?(dictionary: NSDictionary) {
         
         super.init(dictionary: dictionary)
         
-        projectId = dictionary["project-id"] as? Int
-        itemId = dictionary["itemid"] as? Int
+        projectId = dictionary["project-id"] as? String
+        itemId = dictionary["itemid"] as? String
         todoListName = dictionary["todo-list-name"] as? String
         fromUserAvatarUrl = dictionary["from-user-avatar-url"] as? String
         descriptionValue = dictionary["description"] as? String
@@ -55,12 +55,12 @@ public class Activity: Model {
         link = dictionary["link"] as? String
         extraDescription = dictionary["extradescription"] as? String
         isPrivate = dictionary["isprivate"] as? Int
-        id = dictionary["id"] as? Int
+        id = dictionary["id"] as? String
         dueDate = dictionary["due-date"] as? Int
         fromUsername = dictionary["fromusername"] as? String
         type = dictionary["type"] as? String
         forUserAvatarUrl = dictionary["for-user-avatar-url"] as? String
-        userId = dictionary["userid"] as? Int
+        userId = dictionary["userid"] as? String
     }
     
     

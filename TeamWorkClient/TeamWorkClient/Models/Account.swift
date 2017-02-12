@@ -22,10 +22,10 @@ public class Account: Model {
 	public var cacheUUID : String?
 	public var accountHolderId : Int?
 	public var logo : String?
-	public var id : Int?
+	public var id : String?
 	public var url : String?
 	public var emailNotificationEnabled : String?
-	public var companyid : Int?
+	public var companyid : String?
 	public var lang : String?
 	public var code : String?
 
@@ -45,10 +45,10 @@ public class Account: Model {
 		cacheUUID = dictionary["cacheUUID"] as? String
 		accountHolderId = dictionary["account-holder-id"] as? Int
 		logo = dictionary["logo"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		url = dictionary["URL"] as? String
 		emailNotificationEnabled = dictionary["email-notification-enabled"] as? String
-		companyid = dictionary["companyid"] as? Int
+		companyid = dictionary["companyid"] as? String
 		lang = dictionary["lang"] as? String
 		code = dictionary["code"] as? String
 	}

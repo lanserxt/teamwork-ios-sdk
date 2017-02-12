@@ -14,7 +14,7 @@ import Foundation
 
 public class User: Model {
 	public var firstname : String?
-	public var id : Int?
+	public var id : String?
 	public var userimage : String?
 	public var title : String?
 	public var lastname : String?
@@ -22,7 +22,7 @@ public class User: Model {
 	required public init?(dictionary: NSDictionary) {
 		super.init(dictionary: dictionary)
 		firstname = dictionary["firstname"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		userimage = dictionary["userimage"] as? String
 		title = dictionary["title"] as? String
 		lastname = dictionary["lastname"] as? String

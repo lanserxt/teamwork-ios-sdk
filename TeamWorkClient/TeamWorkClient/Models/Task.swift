@@ -13,36 +13,36 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Task: Model {
-	public var taskListId : Int?
+	public var taskListId : String?
 	public var name : String?
 	public var companyName : String?
 	public var projectName : String?
-	public var projectId : Int?
+	public var projectId : String?
 	public var taskEstimateMinutes : Int?
 	public var taskDisplayOrder : Int?
 	public var taskParentTaskId : String?
 	public var lastUpdated : String?
 	public var tags : Array<Tag>?
 	public var taskProgress : Int?
-	public var id : Int?
+	public var id : String?
 	public var completed : String?
 	public var taskListName : String?
 
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		taskListId = dictionary["taskListId"] as? Int
+		taskListId = dictionary["taskListId"] as? String
 		name = dictionary["name"] as? String
 		companyName = dictionary["companyName"] as? String
 		projectName = dictionary["projectName"] as? String
-		projectId = dictionary["projectId"] as? Int
+		projectId = dictionary["projectId"] as? String
 		taskEstimateMinutes = dictionary["taskEstimateMinutes"] as? Int
 		taskDisplayOrder = dictionary["taskDisplayOrder"] as? Int
 		taskParentTaskId = dictionary["taskParentTaskId"] as? String
 		lastUpdated = dictionary["lastUpdated"] as? String
         if (dictionary["tags"] != nil) { tags = Tag.modelsFromDictionaryArray(array: dictionary["tags"] as! NSArray) }
 		taskProgress = dictionary["taskProgress"] as? Int
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		completed = dictionary["completed"] as? String
 		taskListName = dictionary["taskListName"] as? String
 	}

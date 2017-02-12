@@ -14,7 +14,7 @@ import Foundation
 
 public class Owner: Model {
 	public var firstName : String?
-	public var id : Int?
+	public var id : String?
 	public var lastName : String?
     
     required public init?(dictionary: NSDictionary) {
@@ -22,7 +22,7 @@ public class Owner: Model {
         super.init(dictionary: dictionary)
 
 		firstName = dictionary["first-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		lastName = dictionary["last-name"] as? String
 	}
 

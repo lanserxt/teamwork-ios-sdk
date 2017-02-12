@@ -33,7 +33,7 @@ public class Workload: Model {
 	public var totalEstimatedTime : Int?
 	public var percentageMarkedComplete : Int?
 	public var numberOfTasks : Int?
-	public var companyId : Int?
+	public var companyId : String?
 	public var userId : String?
     
 	public required init?(dictionary: NSDictionary) {
@@ -60,7 +60,7 @@ public class Workload: Model {
 		totalEstimatedTime = dictionary["totalEstimatedTime"] as? Int
 		percentageMarkedComplete = dictionary["percentageMarkedComplete"] as? Int
 		numberOfTasks = dictionary["numberOfTasks"] as? Int
-		companyId = dictionary["companyId"] as? Int
+		companyId = dictionary["companyId"] as? String
 		userId = dictionary["userId"] as? String
 	}
 

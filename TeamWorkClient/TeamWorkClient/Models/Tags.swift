@@ -14,7 +14,7 @@ import Foundation
 
 public class Tag: Model {
 	public var name : String?
-	public var id : Int?
+	public var id : String?
 	public var color : String?
 
     public required init?(dictionary: NSDictionary) {
@@ -22,7 +22,7 @@ public class Tag: Model {
         super.init(dictionary: dictionary)
 
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		color = dictionary["color"] as? String
 	}
 

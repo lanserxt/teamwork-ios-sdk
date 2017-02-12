@@ -16,10 +16,10 @@ public class PeopleAPIKey: Model {
 	public var userAPIKey : String?
 	public var firstName : String?
 	public var companyName : String?
-	public var id : Int?
+	public var id : String?
 	public var inOwnerCompany : String?
 	public var lastName : String?
-	public var companyId : Int?
+	public var companyId : String?
 	public var emailAddress : String?
 
 	required public init?(dictionary: NSDictionary) {
@@ -28,10 +28,10 @@ public class PeopleAPIKey: Model {
 		userAPIKey = dictionary["userAPIKey"] as? String
 		firstName = dictionary["first-name"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		inOwnerCompany = dictionary["in-owner-company"] as? String
 		lastName = dictionary["last-name"] as? String
-		companyId = dictionary["companyId"] as? Int
+		companyId = dictionary["companyId"] as? String
 		emailAddress = dictionary["email-address"] as? String
 	}
 

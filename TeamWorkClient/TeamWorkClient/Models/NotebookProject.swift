@@ -15,7 +15,7 @@ import Foundation
 public class NotebookProject: Model {
 	public var notebooks : Array<Notebook>?
 	public var name : String?
-	public var id : Int?
+	public var id : String?
 
 	required public init?(dictionary: NSDictionary) {
         
@@ -23,7 +23,7 @@ public class NotebookProject: Model {
 
         if (dictionary["notebooks"] != nil) { notebooks = Notebook.modelsFromDictionaryArray(array: dictionary["notebooks"] as! NSArray) }
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

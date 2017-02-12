@@ -19,7 +19,7 @@ public class Person: Model {
 	public var userType : String?
 	public var userName : String?
 	public var password : String?
-	public var companyId : Int?
+	public var companyId : String?
 	public var title : String?
 	public var phoneNumberMobile : String?
 	public var phoneNumberOffice : String?
@@ -38,7 +38,7 @@ public class Person: Model {
 	public var userLanguage : String?
 	public var administrator : String?
 	public var canAddProjects : String?
-	public var timezoneId : Int?
+	public var timezoneId : String?
 	public var notifyOnTaskComplete : String?
 	public var userReceiveNotifyWarnings : String?
 	public var notifyOnAddedAsFollower : String?
@@ -53,7 +53,7 @@ public class Person: Model {
 		userType = dictionary["user-type"] as? String
 		userName = dictionary["user-name"] as? String
 		password = dictionary["password"] as? String
-		companyId = dictionary["company-id"] as? Int
+		companyId = dictionary["company-id"] as? String
 		title = dictionary["title"] as? String
 		phoneNumberMobile = dictionary["phone-number-mobile"] as? String
 		phoneNumberOffice = dictionary["phone-number-office"] as? String
@@ -72,7 +72,7 @@ public class Person: Model {
 		userLanguage = dictionary["userLanguage"] as? String
 		administrator = dictionary["administrator"] as? String
 		canAddProjects = dictionary["canAddProjects"] as? String
-		timezoneId = dictionary["timezoneId"] as? Int
+		timezoneId = dictionary["timezoneId"] as? String
 		notifyOnTaskComplete = dictionary["notifyOnTaskComplete"] as? String
 		userReceiveNotifyWarnings = dictionary["userReceiveNotifyWarnings"] as? String
 		notifyOnAddedAsFollower = dictionary["notify-on-added-as-follower"] as? String

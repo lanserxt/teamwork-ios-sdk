@@ -1,4 +1,4 @@
-/* 
+/*
 Copyright (c) 2017 Swift Models Generated from JSON powered by http://www.json4swift.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -13,13 +13,13 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class TodoItem: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var order : Int?
 	public var commentsCount : Int?
 	public var createdOn : String?
 	public var canEdit : String?
 	public var hasPredecessors : Int?
-	public var id : Int?
+	public var id : String?
 	public var completed : String?
 	public var position : Int?
 	public var estimatedMinutes : Int?
@@ -27,10 +27,10 @@ public class TodoItem: Model {
 	public var progress : Int?
 	public var harvestEnabled : String?
 	public var responsiblePartyLastname : String?
-	public var parentTaskId : Int?
-	public var companyId : Int?
+	public var parentTaskId : String?
+	public var companyId : String?
 	public var creatorAvatarUrl : String?
-	public var creatorId : Int?
+	public var creatorId : String?
 	public var projectName : String?
 	public var startDate : Int?
 	public var tasklistPrivate : Int?
@@ -45,7 +45,7 @@ public class TodoItem: Model {
 	public var privateValue : Int?
 	public var responsiblePartySummary : String?
 	public var status : String?
-	public var todoListId : Int?
+	public var todoListId : String?
 	public var predecessor : Array<Predecessor>?
 	public var parentTask : ParentTask?
 	public var content : String?
@@ -59,7 +59,7 @@ public class TodoItem: Model {
 	public var priority : String?
 	public var responsiblePartyFirstname : String?
 	public var viewEstimatedTime : String?
-	public var responsiblePartyIds : Int?
+	public var responsiblePartyIds : String?
 	public var responsiblePartyNames : String?
 	public var tasklistLockdownId : String?
 	public var canLogTime : String?
@@ -69,13 +69,13 @@ public class TodoItem: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectId = dictionary["project-id"] as? Int
+		projectId = dictionary["projectId"] as? String
 		order = dictionary["order"] as? Int
 		commentsCount = dictionary["comments-count"] as? Int
 		createdOn = dictionary["created-on"] as? String
 		canEdit = dictionary["canEdit"] as? String
 		hasPredecessors = dictionary["has-predecessors"] as? Int
-		id = dictionary["id"] as? Int
+		id = unwrapIdValue(dictionary["id"])
 		completed = dictionary["completed"] as? String
 		position = dictionary["position"] as? Int
 		estimatedMinutes = dictionary["estimated-minutes"] as? Int
@@ -83,10 +83,10 @@ public class TodoItem: Model {
 		progress = dictionary["progress"] as? Int
 		harvestEnabled = dictionary["harvest-enabled"] as? String
 		responsiblePartyLastname = dictionary["responsible-party-lastname"] as? String
-		parentTaskId = dictionary["parentTaskId"] as? Int
-		companyId = dictionary["company-id"] as? Int
+		parentTaskId = dictionary["parentTaskId"] as? String
+		companyId = dictionary["company-id"] as? String
 		creatorAvatarUrl = dictionary["creator-avatar-url"] as? String
-		creatorId = dictionary["creator-id"] as? Int
+		creatorId = dictionary["creator-id"] as? String
 		projectName = dictionary["project-name"] as? String
 		startDate = dictionary["start-date"] as? Int
 		tasklistPrivate = dictionary["tasklist-private"] as? Int
@@ -101,7 +101,7 @@ public class TodoItem: Model {
 		privateValue = dictionary["private"] as? Int
 		responsiblePartySummary = dictionary["responsible-party-summary"] as? String
 		status = dictionary["status"] as? String
-		todoListId = dictionary["todo-list-id"] as? Int
+		todoListId = dictionary["todo-list-id"] as? String
         if (dictionary["predecessor"] != nil) { predecessor = Predecessor.modelsFromDictionaryArray(array: dictionary["predecessor"] as! NSArray) }
 		if (dictionary["parentTask"] != nil) { parentTask = ParentTask(dictionary: dictionary["parentTask"] as! NSDictionary) }
 		content = dictionary["content"] as? String
@@ -115,7 +115,7 @@ public class TodoItem: Model {
 		priority = dictionary["priority"] as? String
 		responsiblePartyFirstname = dictionary["responsible-party-firstname"] as? String
 		viewEstimatedTime = dictionary["viewEstimatedTime"] as? String
-		responsiblePartyIds = dictionary["responsible-party-ids"] as? Int
+		responsiblePartyIds = dictionary["responsible-party-ids"] as? String
 		responsiblePartyNames = dictionary["responsible-party-names"] as? String
 		tasklistLockdownId = dictionary["tasklist-lockdownId"] as? String
 		canLogTime = dictionary["canLogTime"] as? String
@@ -127,7 +127,7 @@ public class TodoItem: Model {
 
 		let dictionary = NSMutableDictionary()
 
-		dictionary.setValue(self.projectId, forKey: "project-id")
+		dictionary.setValue(self.projectId, forKey: "projectId")
 		dictionary.setValue(self.order, forKey: "order")
 		dictionary.setValue(self.commentsCount, forKey: "comments-count")
 		dictionary.setValue(self.createdOn, forKey: "created-on")

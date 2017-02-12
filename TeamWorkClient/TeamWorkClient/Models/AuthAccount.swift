@@ -26,11 +26,11 @@ public class AuthAccount: Model {
     public var logo : String?
     public var avatarUrl : String?
     public var startOnSundays : String?
-    public var id : Int?
+    public var id : String?
     public var url : String?
     public var dateFormat : String?
     public var lang : String?
-    public var companyId : Int?
+    public var companyId : String?
     public var code : String?
     public var userId : Int?
     public var lastname : String?
@@ -55,11 +55,11 @@ public class AuthAccount: Model {
         logo = dictionary["logo"] as? String
         avatarUrl = dictionary["avatar-url"] as? String
         startOnSundays = dictionary["startonsundays"] as? String
-        id = dictionary["id"] as? Int
+        id = dictionary["id"] as? String
         url = dictionary["URL"] as? String
         dateFormat = dictionary["dateFormat"] as? String
         lang = dictionary["lang"] as? String
-        companyId = dictionary["companyid"] as? Int
+        companyId = dictionary["companyid"] as? String
         code = dictionary["code"] as? String
         userId = dictionary["userId"] as? Int
         lastname = dictionary["lastname"] as? String

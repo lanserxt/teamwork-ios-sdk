@@ -13,7 +13,7 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class TaskList: Model {
-	public var projectid : Int?
+	public var projectid : String?
 	public var name : String?
 	public var description : String?
 	public var milestoneId : String?
@@ -23,7 +23,7 @@ public class TaskList: Model {
 	public var overdueCount : Int?
 	public var projectName : String?
 	public var pinned : String?
-	public var id : Int?
+	public var id : String?
 	public var position : Int?
 	public var completedCount : Int?
 	public var milestone : Milestone?
@@ -31,7 +31,7 @@ public class TaskList: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectid = dictionary["projectid"] as? Int
+		projectid = dictionary["projectid"] as? String
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
 		milestoneId = dictionary["milestone-id"] as? String
@@ -41,7 +41,7 @@ public class TaskList: Model {
 		overdueCount = dictionary["overdue-count"] as? Int
 		projectName = dictionary["project-name"] as? String
 		pinned = dictionary["pinned"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		position = dictionary["position"] as? Int
 		completedCount = dictionary["completed-count"] as? Int
 		if (dictionary["milestone"] != nil) { milestone = Milestone(dictionary: dictionary["milestone"] as! NSDictionary) }

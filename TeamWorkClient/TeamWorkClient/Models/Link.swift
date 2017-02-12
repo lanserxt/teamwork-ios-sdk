@@ -20,11 +20,11 @@ public class Link: Model {
 	public var height : Int?
 	public var privateValue : Int?
 	public var width : Int?
-	public var createdByUserId : Int?
+	public var createdByUserId : String?
 	public var createdByUserlastname : String?
-	public var categoryId : Int?
+	public var categoryId : String?
 	public var openInNewWindow : Int?
-	public var id : Int?
+	public var id : String?
 	public var provider : String?
 	public var createdDate : String?
 	public var categoryName : String?
@@ -40,11 +40,11 @@ public class Link: Model {
 		height = dictionary["height"] as? Int
 		privateValue = dictionary["private"] as? Int
 		width = dictionary["width"] as? Int
-		createdByUserId = dictionary["created-by-userId"] as? Int
+		createdByUserId = dictionary["created-by-userId"] as? String
 		createdByUserlastname = dictionary["created-by-userlastname"] as? String
-		categoryId = dictionary["category-id"] as? Int
+		categoryId = dictionary["category-id"] as? String
 		openInNewWindow = dictionary["open-in-new-window"] as? Int
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		provider = dictionary["provider"] as? String
 		createdDate = dictionary["created-date"] as? String
 		categoryName = dictionary["category-name"] as? String

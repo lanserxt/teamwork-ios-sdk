@@ -13,21 +13,21 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class TimeEntry: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var minutes : Int?
-	public var isbillable : Int?
+	public var isBillable : Int?
 	public var personFirstName : String?
 	public var todoListName : String?
 	public var description : String?
 	public var todoItemName : String?
 	public var todoListId : String?
 	public var tags : Array<Tag>?
-	public var companyId : Int?
-	public var personId : Int?
+	public var companyId : String?
+	public var personId : String?
 	public var projectStatus : String?
 	public var projectName : String?
 	public var companyName : String?
-	public var id : Int?
+	public var id : String?
 	public var date : String?
 	public var todoItemId : String?
 	public var invoiceNo : String?
@@ -38,21 +38,21 @@ public class TimeEntry: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectId = dictionary["project-id"] as? Int
+		projectId = dictionary["project-id"] as? String
 		minutes = dictionary["minutes"] as? Int
-		isbillable = dictionary["isbillable"] as? Int
+		isBillable = dictionary["isbillable"] as? Int
 		personFirstName = dictionary["person-first-name"] as? String
 		todoListName = dictionary["todo-list-name"] as? String
 		description = dictionary["description"] as? String
 		todoItemName = dictionary["todo-item-name"] as? String
 		todoListId = dictionary["todo-list-id"] as? String
         if (dictionary["tags"] != nil) { tags = Tag.modelsFromDictionaryArray(array: dictionary["tags"] as! NSArray) }
-		companyId = dictionary["company-id"] as? Int
-		personId = dictionary["person-id"] as? Int
+		companyId = dictionary["company-id"] as? String
+		personId = dictionary["person-id"] as? String
 		projectStatus = dictionary["project-status"] as? String
 		projectName = dictionary["project-name"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		date = dictionary["date"] as? String
 		todoItemId = dictionary["todo-item-id"] as? String
 		invoiceNo = dictionary["invoiceNo"] as? String
@@ -67,7 +67,7 @@ public class TimeEntry: Model {
 
 		dictionary.setValue(self.projectId, forKey: "project-id")
 		dictionary.setValue(self.minutes, forKey: "minutes")
-		dictionary.setValue(self.isbillable, forKey: "isbillable")
+		dictionary.setValue(self.isBillable, forKey: "isbillable")
 		dictionary.setValue(self.personFirstName, forKey: "person-first-name")
 		dictionary.setValue(self.todoListName, forKey: "todo-list-name")
 		dictionary.setValue(self.description, forKey: "description")

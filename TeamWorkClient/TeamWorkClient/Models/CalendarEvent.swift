@@ -16,7 +16,7 @@ public class CalendarEvent: Model {
 	public var whereValue : String?
 	public var projectUsersCanEdit : String?
 	public var description : String?
-	public var attendingUserIds : Int?
+	public var attendingUserIds : String?
 	public var notifyUserNames : String?
 	public var attendingUserNames : String?
 	public var status : String?
@@ -26,7 +26,7 @@ public class CalendarEvent: Model {
 	public var start : String?
 	public var repeatValue : Repeat?
 	public var allDay : String?
-	public var id : Int?
+	public var id : String?
 	public var end : String?
 	public var showAsBusy : String?
 	public var lastChangedOn : String?
@@ -43,7 +43,7 @@ public class CalendarEvent: Model {
 		whereValue = dictionary["where"] as? String
 		projectUsersCanEdit = dictionary["project-users-can-edit"] as? String
 		description = dictionary["description"] as? String
-		attendingUserIds = dictionary["attending-user-ids"] as? Int
+		attendingUserIds = dictionary["attending-user-ids"] as? String
 		notifyUserNames = dictionary["notify-user-names"] as? String
 		attendingUserNames = dictionary["attending-user-names"] as? String
 		status = dictionary["status"] as? String
@@ -53,7 +53,7 @@ public class CalendarEvent: Model {
 		start = dictionary["start"] as? String
 		//if (dictionary["repeat"] != nil) { repeatValue = Repeat(dictionary: dictionary["repeat"] as! NSDictionary) }
 		allDay = dictionary["all-day"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		end = dictionary["end"] as? String
 		showAsBusy = dictionary["show-as-busy"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String

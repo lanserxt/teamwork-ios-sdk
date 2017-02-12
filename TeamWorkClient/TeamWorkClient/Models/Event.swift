@@ -14,14 +14,14 @@ import Foundation
 
 public class Event: Model {
 	public var name : String?
-	public var id : Int?
+	public var id : String?
         
     public required init?(dictionary: NSDictionary) {
         
         super.init(dictionary: dictionary)
 
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 	}
     
 	override public func dictionaryRepresentation() -> NSDictionary {

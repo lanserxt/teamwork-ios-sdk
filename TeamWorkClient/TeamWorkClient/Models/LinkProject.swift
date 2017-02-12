@@ -15,14 +15,14 @@ import Foundation
 public class LinkProject: Model {
 	public var links : Array<Link>?
 	public var name : String?
-	public var id : Int?
+	public var id : String?
 
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
         if (dictionary["links"] != nil) { links = Link.modelsFromDictionaryArray(array: dictionary["links"] as! NSArray) }
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 	}
 
 		

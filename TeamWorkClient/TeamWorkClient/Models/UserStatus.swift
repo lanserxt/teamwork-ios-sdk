@@ -17,7 +17,7 @@ public class UserStatus: Model {
 	public var postedOn : String?
 	public var firstName : String?
 	public var avatarUrl : String?
-	public var id : Int?
+	public var id : String?
 	public var lastChangedOn : String?
 	public var status : String?
 	public var lastName : String?
@@ -30,7 +30,7 @@ public class UserStatus: Model {
 		postedOn = dictionary["posted-on"] as? String
 		firstName = dictionary["first-name"] as? String
 		avatarUrl = dictionary["avatar-url"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		status = dictionary["status"] as? String
 		lastName = dictionary["last-name"] as? String

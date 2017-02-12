@@ -13,13 +13,13 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Predecessor: Model {
-	public var id : Int?
+	public var id : String?
 	public var type : String?
 
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		type = dictionary["type"] as? String
 	}
 

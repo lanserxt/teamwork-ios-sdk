@@ -33,7 +33,7 @@ public class Company: Model {
 	public var countrycode : String?
 	public var canSeePrivate : String?
 	public var zip : String?
-	public var id : Int?
+	public var id : String?
 	public var city : String?
 	public var fax : String?
 
@@ -61,7 +61,7 @@ public class Company: Model {
 		countrycode = dictionary["countrycode"] as? String
 		canSeePrivate = dictionary["can_see_private"] as? String
 		zip = dictionary["zip"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		city = dictionary["city"] as? String
 		fax = dictionary["fax"] as? String
 	}

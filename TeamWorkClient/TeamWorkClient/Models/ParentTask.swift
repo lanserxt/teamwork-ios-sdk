@@ -14,13 +14,13 @@ import Foundation
 
 public class ParentTask: Model {
 	public var content : String?
-	public var id : Int?
+	public var id : String?
 
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
 		content = dictionary["content"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

@@ -16,7 +16,7 @@ public class FileProject: Model {
 	public var company : String?
 	public var name : String?
 	public var files : Array<File>?
-	public var id : Int?
+	public var id : String?
     
     public required init?(dictionary: NSDictionary) {
         
@@ -25,7 +25,7 @@ public class FileProject: Model {
 		company = dictionary["company"] as? String
 		name = dictionary["name"] as? String
         if (dictionary["files"] != nil) { files = File.modelsFromDictionaryArray(array: dictionary["files"] as! NSArray) }
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

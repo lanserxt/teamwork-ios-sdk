@@ -16,7 +16,7 @@ public class Template: Model {
 	public var name : String?
 	public var description : String?
 	public var uncompletedCount : Int?
-	public var id : Int?
+	public var id : String?
 	public var complete : String?
 	public var privateValue : String?
 	public var position : Int?
@@ -27,7 +27,7 @@ public class Template: Model {
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
 		uncompletedCount = dictionary["uncompleted-count"] as? Int
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		complete = dictionary["complete"] as? String
 		privateValue = dictionary["private"] as? String
 		position = dictionary["position"] as? Int

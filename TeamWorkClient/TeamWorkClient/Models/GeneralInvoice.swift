@@ -13,7 +13,7 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class GeneralInvoice: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var exportedByUserId : String?
 	public var createdByUserFirstname : String?
 	public var description : String?
@@ -21,18 +21,18 @@ public class GeneralInvoice: Model {
 	public var status : String?
 	public var dateCreated : String?
 	public var exportedByUserLastname : String?
-	public var companyId : Int?
+	public var companyId : String?
 	public var number : String?
 	public var exportedByUserFirstname : String?
 	public var poNumber : String?
 	public var projectName : String?
 	public var displayDate : Int?
 	public var exportedDate : String?
-	public var createdByUserId : Int?
-	public var updateByUserId : Int?
+	public var createdByUserId : String?
+	public var updateByUserId : String?
 	public var createdByUserLastname : String?
 	public var companyName : String?
-	public var id : Int?
+	public var id : String?
 	public var dateUpdated : String?
 	public var editedByUserLastname : String?
 	public var editedByUserFirstname : String?
@@ -43,7 +43,7 @@ public class GeneralInvoice: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? Int
+		projectId = dictionary["project-id"] as? String
 		exportedByUserId = dictionary["exported-by-user-id"] as? String
 		createdByUserFirstname = dictionary["created-by-user-firstname"] as? String
 		description = dictionary["description"] as? String
@@ -51,18 +51,18 @@ public class GeneralInvoice: Model {
 		status = dictionary["status"] as? String
 		dateCreated = dictionary["date-created"] as? String
 		exportedByUserLastname = dictionary["exported-by-user-lastname"] as? String
-		companyId = dictionary["company-id"] as? Int
+		companyId = dictionary["company-id"] as? String
 		number = dictionary["number"] as? String
 		exportedByUserFirstname = dictionary["exported-by-user-firstname"] as? String
 		poNumber = dictionary["po-number"] as? String
 		projectName = dictionary["project-name"] as? String
 		displayDate = dictionary["display-date"] as? Int
 		exportedDate = dictionary["exported-date"] as? String
-		createdByUserId = dictionary["created-by-user-id"] as? Int
-		updateByUserId = dictionary["update-by-user-id"] as? Int
+		createdByUserId = dictionary["created-by-user-id"] as? String
+		updateByUserId = dictionary["update-by-user-id"] as? String
 		createdByUserLastname = dictionary["created-by-user-lastname"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		dateUpdated = dictionary["date-updated"] as? String
 		editedByUserLastname = dictionary["edited-by-user-lastname"] as? String
 		editedByUserFirstname = dictionary["edited-by-user-firstname"] as? String

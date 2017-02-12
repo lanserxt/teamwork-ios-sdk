@@ -14,7 +14,7 @@ import Foundation
 
 public class Risk: Model {
 	public var lastChangedOn : String?
-	public var createdByUserId : Int?
+	public var createdByUserId : String?
 	public var impact : String?
 	public var createdByUserLastName : String?
 	public var impactSchedule : Int?
@@ -29,16 +29,16 @@ public class Risk: Model {
 	public var result : Int?
 	public var probability : String?
 	public var createdOn : String?
-	public var id : Int?
+	public var id : String?
 	public var lastChangedByUserLastName : String?
 	public var impactCost : Int?
-	public var lastChangedByUserId : Int?
+	public var lastChangedByUserId : String?
 
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
 		lastChangedOn = dictionary["lastChangedOn"] as? String
-		createdByUserId = dictionary["createdByUserId"] as? Int
+		createdByUserId = dictionary["createdByUserId"] as? String
 		impact = dictionary["impact"] as? String
 		createdByUserLastName = dictionary["createdByUserLastName"] as? String
 		impactSchedule = dictionary["impactSchedule"] as? Int
@@ -53,10 +53,10 @@ public class Risk: Model {
 		result = dictionary["result"] as? Int
 		probability = dictionary["probability"] as? String
 		createdOn = dictionary["createdOn"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		lastChangedByUserLastName = dictionary["lastChangedByUserLastName"] as? String
 		impactCost = dictionary["impactCost"] as? Int
-		lastChangedByUserId = dictionary["lastChangedByUserId"] as? Int
+		lastChangedByUserId = dictionary["lastChangedByUserId"] as? String
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

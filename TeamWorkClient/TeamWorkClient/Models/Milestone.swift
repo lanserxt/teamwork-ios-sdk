@@ -13,10 +13,10 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Milestone: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var canComplete : String?
-	public var responsiblePartyId : Int?
-	public var completerId : Int?
+	public var responsiblePartyId : String?
+	public var completerId : String?
 	public var commentsCount : Int?
 	public var privateValue : String?
 	public var status : String?
@@ -26,7 +26,7 @@ public class Milestone: Model {
 	public var responsiblePartyType : String?
 	public var isprivate : String?
 	public var companyName : String?
-	public var id : Int?
+	public var id : String?
 	public var lastChangedOn : String?
 	public var completed : String?
 	public var reminder : String?
@@ -37,8 +37,8 @@ public class Milestone: Model {
 	public var responsiblePartyIds : Int?
 	public var responsiblePartyNames : String?
 	public var responsiblePartyLastname : String?
-	public var companyId : Int?
-	public var creatorId : Int?
+	public var companyId : String?
+	public var creatorId : String?
 	public var completerLastname : String?
 	public var projectName : String?
 	public var deadline : Int?
@@ -48,10 +48,10 @@ public class Milestone: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? Int
+		projectId = dictionary["project-id"] as? String
 		canComplete = dictionary["canComplete"] as? String
-		responsiblePartyId = dictionary["responsible-party-id"] as? Int
-		completerId = dictionary["completer-id"] as? Int
+		responsiblePartyId = dictionary["responsible-party-id"] as? String
+		completerId = dictionary["completer-id"] as? String
 		commentsCount = dictionary["comments-count"] as? Int
 		privateValue = dictionary["private"] as? String
 		status = dictionary["status"] as? String
@@ -61,7 +61,7 @@ public class Milestone: Model {
 		responsiblePartyType = dictionary["responsible-party-type"] as? String
 		isprivate = dictionary["isprivate"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		completed = dictionary["completed"] as? String
 		reminder = dictionary["reminder"] as? String
@@ -72,8 +72,8 @@ public class Milestone: Model {
 		responsiblePartyIds = dictionary["responsible-party-ids"] as? Int
 		responsiblePartyNames = dictionary["responsible-party-names"] as? String
 		responsiblePartyLastname = dictionary["responsible-party-lastname"] as? String
-		companyId = dictionary["company-id"] as? Int
-		creatorId = dictionary["creator-id"] as? Int
+		companyId = dictionary["company-id"] as? String
+		creatorId = dictionary["creator-id"] as? String
 		completerLastname = dictionary["completer-lastname"] as? String
 		projectName = dictionary["project-name"] as? String
 		deadline = dictionary["deadline"] as? Int

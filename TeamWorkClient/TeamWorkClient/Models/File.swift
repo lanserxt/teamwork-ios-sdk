@@ -13,7 +13,7 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class File: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var uploadedByUserLastName : String?
 	public var name : String?
 	public var uploadedDate : String?
@@ -23,11 +23,11 @@ public class File: Model {
 	public var versionId : Int?
 	public var privateValue : Int?
 	public var downloadUrl : String?
-	public var categoryId : Int?
+	public var categoryId : String?
 	public var projectName : String?
 	public var version : Int?
 	public var originalName : String?
-	public var id : Int?
+	public var id : String?
 	public var size : Int?
 	public var fileSource : String?
 	public var uploadedByUserFirstName : String?
@@ -37,7 +37,7 @@ public class File: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? Int
+		projectId = dictionary["project-id"] as? String
 		uploadedByUserLastName = dictionary["uploaded-by-user-last-name"] as? String
 		name = dictionary["name"] as? String
 		uploadedDate = dictionary["uploaded-date"] as? String
@@ -47,11 +47,11 @@ public class File: Model {
 		versionId = dictionary["version-id"] as? Int
 		privateValue = dictionary["private"] as? Int
 		downloadUrl = dictionary["download-URL"] as? String
-		categoryId = dictionary["category-id"] as? Int
+		categoryId = dictionary["category-id"] as? String
 		projectName = dictionary["project-name"] as? String
 		version = dictionary["version"] as? Int
 		originalName = dictionary["originalName"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		size = dictionary["size"] as? Int
 		fileSource = dictionary["file-source"] as? String
 		uploadedByUserFirstName = dictionary["uploaded-by-user-first-name"] as? String

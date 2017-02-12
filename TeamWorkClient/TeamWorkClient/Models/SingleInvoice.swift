@@ -14,7 +14,7 @@ import Foundation
 
 public class SingleInvoice: Model {
     public var exportedByUserId : String?
-    public var projectId : Int?
+    public var projectId : String?
     public var createdByUserFirstname : String?
     public var fixedCost : String?
     public var status : String?
@@ -25,15 +25,15 @@ public class SingleInvoice: Model {
     public var poNumber : String?
     public var exportedByUserFirstname : String?
     public var expenses : [Expense]?
-    public var updateByUserId : Int?
-    public var createdByUserId : Int?
-    public var id : Int?
+    public var updateByUserId : String?
+    public var createdByUserId : String?
+    public var id : String?
     public var companyName : String?
     public var editedByUserFirstname : String?
     public var totalTimeDecimal : Double?
     public var totalCost : Double?
     public var description : String?
-    public var companyId : Int?
+    public var companyId : String?
     public var exportedDate : String?
     public var displayDate : Int?
     public var projectName : String?
@@ -49,7 +49,7 @@ public class SingleInvoice: Model {
         super.init(dictionary: dictionary)
         
         exportedByUserId = dictionary["exported-by-user-id"] as? String
-        projectId = dictionary["project-id"] as? Int
+        projectId = dictionary["project-id"] as? String
         createdByUserFirstname = dictionary["created-by-user-firstname"] as? String
         fixedCost = dictionary["fixed-cost"] as? String
         status = dictionary["status"] as? String
@@ -60,15 +60,15 @@ public class SingleInvoice: Model {
         poNumber = dictionary["po-number"] as? String
         exportedByUserFirstname = dictionary["exported-by-user-firstname"] as? String
         if (dictionary["expenses"] != nil) { expenses = Expense.modelsFromDictionaryArray(array: (dictionary["expenses"] as? NSArray)!) }
-        updateByUserId = dictionary["update-by-user-id"] as? Int
-        createdByUserId = dictionary["created-by-user-id"] as? Int
-        id = dictionary["id"] as? Int
+        updateByUserId = dictionary["update-by-user-id"] as? String
+        createdByUserId = dictionary["created-by-user-id"] as? String
+        id = dictionary["id"] as? String
         companyName = dictionary["company-name"] as? String
         editedByUserFirstname = dictionary["edited-by-user-firstname"] as? String
         totalTimeDecimal = dictionary["total-time-decimal"] as? Double
         totalCost = dictionary["total-cost"] as? Double
         description = dictionary["description"] as? String
-        companyId = dictionary["company-id"] as? Int
+        companyId = dictionary["company-id"] as? String
         exportedDate = dictionary["exported-date"] as? String
         displayDate = dictionary["display-date"] as? Int
         projectName = dictionary["project-name"] as? String

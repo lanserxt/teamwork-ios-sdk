@@ -13,7 +13,7 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class FullPost: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var authorFirstName : String?
 	public var milestoneId : String?
 	public var numNotified : Int?
@@ -22,7 +22,7 @@ public class FullPost: Model {
 	public var commentsCount : Int?
 	public var authorAvatarUrl : String?
 	public var authorLastName : String?
-	public var id : Int?
+	public var id : String?
 	public var lastChangedOn : String?
 	public var useTextile : String?
 	public var contentType : String?
@@ -31,13 +31,13 @@ public class FullPost: Model {
 	public var userDisplayPostedTime : String?
 	public var messageStatus : String?
 	public var attachmentsCount : Int?
-	public var postId : Int?
+	public var postId : String?
 	public var categoryId : String?
 	public var htmlBody : String?
 	public var postedOn : String?
 	public var body : String?
 	public var attachments : Array<String>?
-	public var authorId : Int?
+	public var authorId : String?
 	public var postStatus : String?
 	public var displayBody : String?
 	public var title : String?
@@ -47,7 +47,7 @@ public class FullPost: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? Int
+		projectId = dictionary["project-id"] as? String
 		authorFirstName = dictionary["author-first-name"] as? String
 		milestoneId = dictionary["milestone-id"] as? String
 		numNotified = dictionary["numNotified"] as? Int
@@ -56,7 +56,7 @@ public class FullPost: Model {
 		commentsCount = dictionary["comments-count"] as? Int
 		authorAvatarUrl = dictionary["author-avatar-url"] as? String
 		authorLastName = dictionary["author-last-name"] as? String
-		id = dictionary["id"] as? Int
+		id = dictionary["id"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		useTextile = dictionary["use-textile"] as? String
 		contentType = dictionary["content-type"] as? String
@@ -65,14 +65,14 @@ public class FullPost: Model {
 		userDisplayPostedTime = dictionary["user-display-posted-time"] as? String
 		messageStatus = dictionary["message-status"] as? String
 		attachmentsCount = dictionary["attachments-count"] as? Int
-		postId = dictionary["post-id"] as? Int
+		postId = dictionary["post-id"] as? String
 		categoryId = dictionary["category-id"] as? String
 		htmlBody = dictionary["html-body"] as? String
 		postedOn = dictionary["posted-on"] as? String
 		body = dictionary["body"] as? String
         attachments = dictionary["attachments"] as? Array<String>
 		//if (dictionary["attachments"] != nil) { attachments = Attachments.modelsFromDictionaryArray(dictionary["attachments"] as! NSArray) }
-		authorId = dictionary["author-id"] as? Int
+		authorId = dictionary["author-id"] as? String
 		postStatus = dictionary["post-status"] as? String
 		displayBody = dictionary["display-body"] as? String
 		title = dictionary["title"] as? String

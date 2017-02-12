@@ -13,24 +13,24 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Category: Model {
-	public var projectId : Int?
-	public var parentId : Int?
+	public var projectId : String?
+	public var parentId : String?
 	public var name : String?
 	public var count : Int?
-	public var id : Int?
-	public var elements_count : Int?
+	public var id : String?
+	public var elementsCount : Int?
 	public var type : String?
 
 
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectId = dictionary["project-id"] as? Int
-		parentId = dictionary["parent-id"] as? Int
+		projectId = dictionary["project-id"] as? String
+		parentId = dictionary["parent-id"] as? String
 		name = dictionary["name"] as? String
 		count = dictionary["count"] as? Int
-		id = dictionary["id"] as? Int
-		elements_count = dictionary["elements_count"] as? Int
+		id = dictionary["id"] as? String
+		elementsCount = dictionary["elements_count"] as? Int
 		type = dictionary["type"] as? String
 	}
 
@@ -43,7 +43,7 @@ public class Category: Model {
 		dictionary.setValue(self.name, forKey: "name")
 		dictionary.setValue(self.count, forKey: "count")
 		dictionary.setValue(self.id, forKey: "id")
-		dictionary.setValue(self.elements_count, forKey: "elements_count")
+		dictionary.setValue(self.elementsCount, forKey: "elements_count")
 		dictionary.setValue(self.type, forKey: "type")
 
 		return dictionary
