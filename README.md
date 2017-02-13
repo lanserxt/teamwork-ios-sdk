@@ -1,7 +1,7 @@
 TeamWork iOS SDK
 ===============
 
-SWIFT API wrapper for [TeamWork API](http://developer.teamwork.com).
+Swift API wrapper for [TeamWork API](http://developer.teamwork.com).
 
 ##Requirements
 
