@@ -25,7 +25,7 @@ You just need to create an instance of TWApiClient and pass your URL and token. 
 ```swift
 class ViewController: UIViewController {
     
-    fileprivate let apiClient:TWApiClient = TWApiClient.init(url: "https://itgroup1.teamwork.com", token: "tank860cut")
+    fileprivate let apiClient:TWApiClient = TWApiClient.init(url: "your_url", token: "your_token")
 
     override func viewDidLoad() {
         super.viewDidLoad()
