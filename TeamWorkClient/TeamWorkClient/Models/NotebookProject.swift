@@ -23,7 +23,7 @@ public class NotebookProject: Model {
 
         if (dictionary["notebooks"] != nil) { notebooks = Notebook.modelsFromDictionaryArray(array: dictionary["notebooks"] as! NSArray) }
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

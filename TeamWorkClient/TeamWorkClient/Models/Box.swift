@@ -24,7 +24,7 @@ public class Box: Model {
         folderName = dictionary["folder-name"] as? String
 		folderAccess = dictionary["folder-access"] as? String
 		enabled = dictionary["enabled"] as? Int
-		folderId = dictionary["folder-id"] as? String
+		folderId = unwrapIdValue(dictionary["folder-id"])
 	}
 		
 	public override func dictionaryRepresentation() -> NSDictionary {

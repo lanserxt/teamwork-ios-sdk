@@ -25,7 +25,7 @@ public class ProjectTimeTotals: Model {
 		if (dictionary["company"] != nil) { company = Company(dictionary: dictionary["company"] as! NSDictionary) }
 		if (dictionary["time-estimates"] != nil) { timeEstimates = TimeEstimates(dictionary: dictionary["time-estimates"] as! NSDictionary) }
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		if (dictionary["time-totals"] != nil) { timeTotals = TimeTotals(dictionary: dictionary["time-totals"] as! NSDictionary) }
 	}
 

@@ -42,25 +42,25 @@ public class Notebook: Model {
 
         super.init(dictionary: dictionary)
         
-		projectId = dictionary["project-id"] as? String
-		updatedByUserId = dictionary["updated-by-userId"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
+		updatedByUserId = unwrapIdValue(dictionary["updated-by-userId"])
 		readCommentsCount = dictionary["read-comments-count"] as? Int
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
 		createdByUserfirstname = dictionary["created-by-userfirstname"] as? String
 		commentsCount = dictionary["comments-count"] as? Int
-		versionId = dictionary["version-id"] as? String
+		versionId = unwrapIdValue(dictionary["version-id"])
 		privateValue = dictionary["private"] as? Int
-		lockdownId = dictionary["lockdown-id"] as? String
+		lockdownId = unwrapIdValue(dictionary["lockdown-id"])
 		updatedByUserlastname = dictionary["updated-by-userlastname"] as? String
 		updatedDate = dictionary["updated-date"] as? String
-		createdByUserId = dictionary["created-by-userId"] as? String
+		createdByUserId = unwrapIdValue(dictionary["created-by-userId"])
 		createdByUserlastname = dictionary["created-by-userlastname"] as? String
-		categoryId = dictionary["category-id"] as? String
+		categoryId = unwrapIdValue(dictionary["category-id"])
 		version = dictionary["version"] as? Int
 		userDisplayUpdatedDate = dictionary["user-display-updated-date"] as? String
 		userDisplayUpdatedTime = dictionary["user-display-updated-time"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		nrComments = dictionary["nr-comments"] as? Int
 		updatedByUserfirstname = dictionary["updated-by-userfirstname"] as? String
 		createdDate = dictionary["created-date"] as? String

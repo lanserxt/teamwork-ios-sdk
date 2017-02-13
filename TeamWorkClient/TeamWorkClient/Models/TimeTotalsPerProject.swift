@@ -27,7 +27,7 @@ public class TimeTotalsPerProject: Model {
 		name = dictionary["name"] as? String
 		totalNonBillableMins = dictionary["totalNonBillableMins"] as? Int
 		totalBillableMins = dictionary["totalBillableMins"] as? Int
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		totalMins = dictionary["totalMins"] as? Int
 	}
 

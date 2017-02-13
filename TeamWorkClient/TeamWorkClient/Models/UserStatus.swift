@@ -21,7 +21,7 @@ public class UserStatus: Model {
 	public var lastChangedOn : String?
 	public var status : String?
 	public var lastName : String?
-	public var userId : Int?
+	public var userId : String?
 
 	required public init?(dictionary: NSDictionary) {
 
@@ -30,11 +30,11 @@ public class UserStatus: Model {
 		postedOn = dictionary["posted-on"] as? String
 		firstName = dictionary["first-name"] as? String
 		avatarUrl = dictionary["avatar-url"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		status = dictionary["status"] as? String
 		lastName = dictionary["last-name"] as? String
-		userId = dictionary["userId"] as? Int
+		userId = unwrapIdValue(dictionary["userId"])
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

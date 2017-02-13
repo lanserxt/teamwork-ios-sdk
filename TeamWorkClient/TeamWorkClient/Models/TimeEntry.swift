@@ -38,23 +38,23 @@ public class TimeEntry: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectId = dictionary["project-id"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
 		minutes = dictionary["minutes"] as? Int
 		isBillable = dictionary["isbillable"] as? Int
 		personFirstName = dictionary["person-first-name"] as? String
 		todoListName = dictionary["todo-list-name"] as? String
 		description = dictionary["description"] as? String
 		todoItemName = dictionary["todo-item-name"] as? String
-		todoListId = dictionary["todo-list-id"] as? String
+		todoListId = unwrapIdValue(dictionary["todo-list-id"])
         if (dictionary["tags"] != nil) { tags = Tag.modelsFromDictionaryArray(array: dictionary["tags"] as! NSArray) }
-		companyId = dictionary["company-id"] as? String
-		personId = dictionary["person-id"] as? String
+		companyId = unwrapIdValue(dictionary["company-id"])
+		personId = unwrapIdValue(dictionary["person-id"])
 		projectStatus = dictionary["project-status"] as? String
 		projectName = dictionary["project-name"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		date = dictionary["date"] as? String
-		todoItemId = dictionary["todo-item-id"] as? String
+		todoItemId = unwrapIdValue(dictionary["todo-item-id"])
 		invoiceNo = dictionary["invoiceNo"] as? String
 		personLastName = dictionary["person-last-name"] as? String
 		hasStartTime = dictionary["has-start-time"] as? Int

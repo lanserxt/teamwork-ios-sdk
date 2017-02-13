@@ -44,7 +44,7 @@ public class Workload: Model {
 		totalLoggedTime = dictionary["totalLoggedTime"] as? Int
 		totalMarkedComplete = dictionary["totalMarkedComplete"] as? Int
 		companyName = dictionary["companyName"] as? String
-		userCompanyId = dictionary["userCompanyId"] as? String
+		userCompanyId = unwrapIdValue(dictionary["userCompanyId"])
 		userLastName = dictionary["userLastName"] as? String
 		projectName = dictionary["projectName"] as? String
 		numberOfProjects = dictionary["numberOfProjects"] as? Int
@@ -60,8 +60,8 @@ public class Workload: Model {
 		totalEstimatedTime = dictionary["totalEstimatedTime"] as? Int
 		percentageMarkedComplete = dictionary["percentageMarkedComplete"] as? Int
 		numberOfTasks = dictionary["numberOfTasks"] as? Int
-		companyId = dictionary["companyId"] as? String
-		userId = dictionary["userId"] as? String
+		companyId = unwrapIdValue(dictionary["companyId"])
+		userId = unwrapIdValue(dictionary["userId"])
 	}
 
 	override public func dictionaryRepresentation() -> NSDictionary {

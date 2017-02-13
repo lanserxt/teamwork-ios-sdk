@@ -26,7 +26,7 @@ public class Post: Model {
         super.init(dictionary: dictionary)
 
 		title = dictionary["title"] as? String
-		categoryId = dictionary["category-id"] as? String
+		categoryId = unwrapIdValue(dictionary["category-id"])
 		privateValue = dictionary["private"] as? Int
 		body = dictionary["body"] as? String
 		attachments = dictionary["attachments"] as? String

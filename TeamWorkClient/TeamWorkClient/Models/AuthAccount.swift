@@ -32,7 +32,7 @@ public class AuthAccount: Model {
     public var lang : String?
     public var companyId : String?
     public var code : String?
-    public var userId : Int?
+    public var userId : String?
     public var lastname : String?
     
     //MARK:- Init
@@ -55,13 +55,13 @@ public class AuthAccount: Model {
         logo = dictionary["logo"] as? String
         avatarUrl = dictionary["avatar-url"] as? String
         startOnSundays = dictionary["startonsundays"] as? String
-        id = dictionary["id"] as? String
-        url = dictionary["URL"] as? String
+        id = unwrapIdValue(dictionary["id"])
+        url = unwrapIdValue(dictionary["URL"])
         dateFormat = dictionary["dateFormat"] as? String
         lang = dictionary["lang"] as? String
-        companyId = dictionary["companyid"] as? String
+        companyId = unwrapIdValue(dictionary["companyid"])
         code = dictionary["code"] as? String
-        userId = dictionary["userId"] as? Int
+        userId = unwrapIdValue(dictionary["userId"])
         lastname = dictionary["lastname"] as? String
     }
     

@@ -25,11 +25,11 @@ public class Category: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectId = dictionary["project-id"] as? String
-		parentId = dictionary["parent-id"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
+		parentId = unwrapIdValue(dictionary["parent-id"])
 		name = dictionary["name"] as? String
 		count = dictionary["count"] as? Int
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		elementsCount = dictionary["elements_count"] as? Int
 		type = dictionary["type"] as? String
 	}

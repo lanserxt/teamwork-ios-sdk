@@ -20,7 +20,7 @@ public class Reminder: Model{
 	public var note : String?
 	public var userFirstname : String?
 	public var dateTimeUtc : String?
-	public var createdByUserId : Int?
+	public var createdByUserId : String?
 	public var createdByUserLastname : String?
 	public var userId : String?
 	public var taskId : String?
@@ -38,11 +38,11 @@ public class Reminder: Model{
 		note = dictionary["note"] as? String
 		userFirstname = dictionary["user-firstname"] as? String
 		dateTimeUtc = dictionary["date-time-utc"] as? String
-		createdByUserId = dictionary["created-by-user-id"] as? Int
+		createdByUserId = unwrapIdValue(dictionary["created-by-user-id"])
 		createdByUserLastname = dictionary["created-by-user-lastname"] as? String
-		userId = dictionary["user-id"] as? String
-		taskId = dictionary["task-id"] as? String
-		id = dictionary["id"] as? String
+		userId = unwrapIdValue(dictionary["user-id"])
+		taskId = unwrapIdValue(dictionary["task-id"])
+		id = unwrapIdValue(dictionary["id"])
 		type = dictionary["type"] as? String
 	}
 

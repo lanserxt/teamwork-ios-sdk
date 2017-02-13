@@ -22,7 +22,7 @@ public class User: Model {
 	required public init?(dictionary: NSDictionary) {
 		super.init(dictionary: dictionary)
 		firstname = dictionary["firstname"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		userimage = dictionary["userimage"] as? String
 		title = dictionary["title"] as? String
 		lastname = dictionary["lastname"] as? String

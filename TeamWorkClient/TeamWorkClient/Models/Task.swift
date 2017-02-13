@@ -31,18 +31,18 @@ public class Task: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		taskListId = dictionary["taskListId"] as? String
+		taskListId = unwrapIdValue(dictionary["taskListId"])
 		name = dictionary["name"] as? String
 		companyName = dictionary["companyName"] as? String
 		projectName = dictionary["projectName"] as? String
-		projectId = dictionary["projectId"] as? String
+		projectId = unwrapIdValue(dictionary["projectId"])
 		taskEstimateMinutes = dictionary["taskEstimateMinutes"] as? Int
 		taskDisplayOrder = dictionary["taskDisplayOrder"] as? Int
-		taskParentTaskId = dictionary["taskParentTaskId"] as? String
+		taskParentTaskId = unwrapIdValue(dictionary["taskParentTaskId"])
 		lastUpdated = dictionary["lastUpdated"] as? String
         if (dictionary["tags"] != nil) { tags = Tag.modelsFromDictionaryArray(array: dictionary["tags"] as! NSArray) }
 		taskProgress = dictionary["taskProgress"] as? Int
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		completed = dictionary["completed"] as? String
 		taskListName = dictionary["taskListName"] as? String
 	}

@@ -21,7 +21,7 @@ public class Event: Model {
         super.init(dictionary: dictionary)
 
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 	}
     
 	override public func dictionaryRepresentation() -> NSDictionary {

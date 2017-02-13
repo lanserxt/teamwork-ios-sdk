@@ -26,12 +26,12 @@ public class Dependent: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		responsiblePartyId = dictionary["responsible-party-id"] as? String
+		responsiblePartyId = unwrapIdValue(dictionary["responsible-party-id"])
 		predecessorMust = dictionary["predecessorMust"] as? String
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		hardness = dictionary["hardness"] as? String
-		projectId = dictionary["projectId"] as? String
+		projectId = unwrapIdValue(dictionary["projectId"])
 		dependentCant = dictionary["dependentCant"] as? String
 		responsiblePartySummary = dictionary["responsible-party-summary"] as? String
 		responsiblePartyNames = dictionary["responsible-party-names"] as? String

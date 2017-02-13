@@ -20,7 +20,7 @@ public class Account: Model {
 	public var sslEnabled : String?
 	public var createdAt : String?
 	public var cacheUUID : String?
-	public var accountHolderId : Int?
+	public var accountHolderId : String?
 	public var logo : String?
 	public var id : String?
 	public var url : String?
@@ -43,9 +43,9 @@ public class Account: Model {
 		sslEnabled = dictionary["ssl-enabled"] as? String
 		createdAt = dictionary["created-at"] as? String
 		cacheUUID = dictionary["cacheUUID"] as? String
-		accountHolderId = dictionary["account-holder-id"] as? Int
+		accountHolderId =  unwrapIdValue(dictionary["account-holder-id"])
 		logo = dictionary["logo"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		url = dictionary["URL"] as? String
 		emailNotificationEnabled = dictionary["email-notification-enabled"] as? String
 		companyid = dictionary["companyid"] as? String

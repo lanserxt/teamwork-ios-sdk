@@ -16,7 +16,7 @@ public class Comment: Model {
 	public var projectId : String?
 	public var attachmentsCount : Int?
 	public var authorLastname : String?
-	public var commentableId : Int?
+	public var commentableId : String?
 	public var commentableType : String?
 	public var emailedFrom : String?
 	public var isRead : Int?
@@ -44,9 +44,9 @@ public class Comment: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
 		authorLastname = dictionary["author-lastname"] as? String
-		commentableId = dictionary["commentable-id"] as? Int
+		commentableId = unwrapIdValue(dictionary["commentable-id"])
 		commentableType = dictionary["commentable_type"] as? String
 		emailedFrom = dictionary["emailed-from"] as? String
 		isRead = dictionary["isRead"] as? Int
@@ -54,8 +54,8 @@ public class Comment: Model {
 		lockdownId = dictionary["lockdown-id"] as? String
 		datetime = dictionary["datetime"] as? String
 		authorAvatarUrl = dictionary["author-avatar-url"] as? String
-		authorId = dictionary["author_id"] as? String
-		id = dictionary["id"] as? String
+		authorId = unwrapIdValue(dictionary["author_id"])
+		id = unwrapIdValue(dictionary["id"])
 		companyName = dictionary["company-name"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		contentType = dictionary["content-type"] as? String
@@ -63,7 +63,7 @@ public class Comment: Model {
 		type = dictionary["type"] as? String
 		itemName = dictionary["item-name"] as? String
 		attachmentsCount = dictionary["attachments-count"] as? Int
-		companyId = dictionary["company-id"] as? String
+		companyId = unwrapIdValue(dictionary["company-id"])
 		htmlBody = dictionary["html-body"] as? String
 		projectName = dictionary["project-name"] as? String
 		body = dictionary["body"] as? String

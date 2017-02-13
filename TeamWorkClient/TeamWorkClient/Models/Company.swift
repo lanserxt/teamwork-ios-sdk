@@ -61,7 +61,7 @@ public class Company: Model {
 		countrycode = dictionary["countrycode"] as? String
 		canSeePrivate = dictionary["can_see_private"] as? String
 		zip = dictionary["zip"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		city = dictionary["city"] as? String
 		fax = dictionary["fax"] as? String
 	}

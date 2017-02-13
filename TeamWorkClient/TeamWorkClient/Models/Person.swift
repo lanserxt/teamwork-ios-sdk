@@ -33,7 +33,7 @@ public class Person: Model {
 	public var welcomeEmailMessage : String?
 	public var receiveDailyReports : String?
 	public var autoGiveProjectAccess : String?
-	public var openID : String?
+	public var openId : String?
 	public var notes : String?
 	public var userLanguage : String?
 	public var administrator : String?
@@ -53,7 +53,7 @@ public class Person: Model {
 		userType = dictionary["user-type"] as? String
 		userName = dictionary["user-name"] as? String
 		password = dictionary["password"] as? String
-		companyId = dictionary["company-id"] as? String
+		companyId = unwrapIdValue(dictionary["company-id"])
 		title = dictionary["title"] as? String
 		phoneNumberMobile = dictionary["phone-number-mobile"] as? String
 		phoneNumberOffice = dictionary["phone-number-office"] as? String
@@ -67,12 +67,12 @@ public class Person: Model {
 		welcomeEmailMessage = dictionary["welcomeEmailMessage"] as? String
 		receiveDailyReports = dictionary["receiveDailyReports"] as? String
 		autoGiveProjectAccess = dictionary["autoGiveProjectAccess"] as? String
-		openID = dictionary["openID"] as? String
+		openId = unwrapIdValue(dictionary["openID"])
 		notes = dictionary["notes"] as? String
 		userLanguage = dictionary["userLanguage"] as? String
 		administrator = dictionary["administrator"] as? String
 		canAddProjects = dictionary["canAddProjects"] as? String
-		timezoneId = dictionary["timezoneId"] as? String
+		timezoneId = unwrapIdValue(dictionary["timezoneId"])
 		notifyOnTaskComplete = dictionary["notifyOnTaskComplete"] as? String
 		userReceiveNotifyWarnings = dictionary["userReceiveNotifyWarnings"] as? String
 		notifyOnAddedAsFollower = dictionary["notify-on-added-as-follower"] as? String
@@ -104,7 +104,7 @@ public class Person: Model {
 		dictionary.setValue(self.welcomeEmailMessage, forKey: "welcomeEmailMessage")
 		dictionary.setValue(self.receiveDailyReports, forKey: "receiveDailyReports")
 		dictionary.setValue(self.autoGiveProjectAccess, forKey: "autoGiveProjectAccess")
-		dictionary.setValue(self.openID, forKey: "openID")
+		dictionary.setValue(self.openId, forKey: "openID")
 		dictionary.setValue(self.notes, forKey: "notes")
 		dictionary.setValue(self.userLanguage, forKey: "userLanguage")
 		dictionary.setValue(self.administrator, forKey: "administrator")

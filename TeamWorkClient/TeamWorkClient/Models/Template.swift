@@ -27,7 +27,7 @@ public class Template: Model {
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
 		uncompletedCount = dictionary["uncompleted-count"] as? Int
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		complete = dictionary["complete"] as? String
 		privateValue = dictionary["private"] as? String
 		position = dictionary["position"] as? Int

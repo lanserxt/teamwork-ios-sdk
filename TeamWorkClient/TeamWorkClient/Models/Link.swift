@@ -13,7 +13,7 @@ import Foundation
 /* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 public class Link: Model {
-	public var projectId : Int?
+	public var projectId : String?
 	public var name : String?
 	public var description : String?
 	public var createdByUserfirstname : String?
@@ -33,18 +33,18 @@ public class Link: Model {
 	required public init?(dictionary: NSDictionary) {
 		
         super.init(dictionary: dictionary)
-		projectId = dictionary["project-id"] as? Int
+		projectId = unwrapIdValue(dictionary["project-id"])
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
 		createdByUserfirstname = dictionary["created-by-userfirstname"] as? String
 		height = dictionary["height"] as? Int
 		privateValue = dictionary["private"] as? Int
 		width = dictionary["width"] as? Int
-		createdByUserId = dictionary["created-by-userId"] as? String
+		createdByUserId = unwrapIdValue(dictionary["created-by-userId"])
 		createdByUserlastname = dictionary["created-by-userlastname"] as? String
-		categoryId = dictionary["category-id"] as? String
+		categoryId = unwrapIdValue(dictionary["category-id"])
 		openInNewWindow = dictionary["open-in-new-window"] as? Int
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		provider = dictionary["provider"] as? String
 		createdDate = dictionary["created-date"] as? String
 		categoryName = dictionary["category-name"] as? String

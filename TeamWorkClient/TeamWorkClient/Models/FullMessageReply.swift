@@ -34,12 +34,12 @@ public class FullMessageReply: Model {
 		attachmentsCount = dictionary["attachments-count"] as? Int
 		emailedFrom = dictionary["emailed-from"] as? String
 		authorAvatarUrl = dictionary["author-avatar-url"] as? String
-		authorId = dictionary["author_id"] as? String
+		authorId = unwrapIdValue(dictionary["author_id"])
 		postedOn = dictionary["posted-on"] as? String
 		body = dictionary["body"] as? String
 		//if (dictionary["attachments"] != nil) { attachments = Attachments.modelsFromDictionaryArray(dictionary["attachments"] as! NSArray) }
 		authorFirstname = dictionary["author-firstname"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		messageId = dictionary["messageId"] as? String
 	}

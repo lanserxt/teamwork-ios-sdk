@@ -43,17 +43,17 @@ public class CalendarEvent: Model {
 		whereValue = dictionary["where"] as? String
 		projectUsersCanEdit = dictionary["project-users-can-edit"] as? String
 		description = dictionary["description"] as? String
-		attendingUserIds = dictionary["attending-user-ids"] as? String
+		attendingUserIds = unwrapIdValue(dictionary["attending-user-ids"])
 		notifyUserNames = dictionary["notify-user-names"] as? String
 		attendingUserNames = dictionary["attending-user-names"] as? String
 		status = dictionary["status"] as? String
 		if (dictionary["owner"] != nil) { owner = Owner(dictionary: dictionary["owner"] as! NSDictionary) }
 		if (dictionary["reminders"] != nil) { reminders = Reminder.modelsFromDictionaryArray(array: dictionary["reminders"] as! NSArray) }
-		notifyUserIds = dictionary["notify-user-ids"] as? String
+		notifyUserIds = unwrapIdValue(dictionary["notify-user-ids"])
 		start = dictionary["start"] as? String
 		//if (dictionary["repeat"] != nil) { repeatValue = Repeat(dictionary: dictionary["repeat"] as! NSDictionary) }
 		allDay = dictionary["all-day"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		end = dictionary["end"] as? String
 		showAsBusy = dictionary["show-as-busy"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String

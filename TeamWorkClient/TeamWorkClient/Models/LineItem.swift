@@ -38,12 +38,12 @@ public class LineItem: Model {
 		decimalHours = dictionary["decimal-hours"] as? Double
 		description = dictionary["description"] as? String
 		userLastname = dictionary["user-lastname"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		userFirstname = dictionary["user-firstname"] as? String
 		billable = dictionary["billable"] as? Int
 		taskName = dictionary["task-name"] as? String
-		userId = dictionary["user-id"] as? String
-		taskId = dictionary["task-id"] as? String
+		userId = unwrapIdValue(dictionary["user-id"])
+		taskId = unwrapIdValue(dictionary["task-id"])
 		cost = dictionary["cost"] as? Double
 	}
 

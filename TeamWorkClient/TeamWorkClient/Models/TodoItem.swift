@@ -36,7 +36,7 @@ public class TodoItem: Model {
 	public var tasklistPrivate : Int?
 	public var lockdownId : String?
 	public var canComplete : String?
-	public var responsiblePartyId : Int?
+	public var responsiblePartyId : String?
 	public var creatorLastname : String?
 	public var hasReminders : String?
 	public var todoListName : String?
@@ -69,7 +69,7 @@ public class TodoItem: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectId = dictionary["projectId"] as? String
+		projectId = unwrapIdValue(dictionary["projectId"])
 		order = dictionary["order"] as? Int
 		commentsCount = dictionary["comments-count"] as? Int
 		createdOn = dictionary["created-on"] as? String
@@ -83,16 +83,16 @@ public class TodoItem: Model {
 		progress = dictionary["progress"] as? Int
 		harvestEnabled = dictionary["harvest-enabled"] as? String
 		responsiblePartyLastname = dictionary["responsible-party-lastname"] as? String
-		parentTaskId = dictionary["parentTaskId"] as? String
-		companyId = dictionary["company-id"] as? String
+		parentTaskId = unwrapIdValue(dictionary["parentTaskId"])
+		companyId = unwrapIdValue(dictionary["company-id"])
 		creatorAvatarUrl = dictionary["creator-avatar-url"] as? String
-		creatorId = dictionary["creator-id"] as? String
+		creatorId = unwrapIdValue(dictionary["creator-id"])
 		projectName = dictionary["project-name"] as? String
 		startDate = dictionary["start-date"] as? Int
 		tasklistPrivate = dictionary["tasklist-private"] as? Int
-		lockdownId = dictionary["lockdownId"] as? String
+		lockdownId = unwrapIdValue(dictionary["lockdownId"])
 		canComplete = dictionary["canComplete"] as? String
-		responsiblePartyId = dictionary["responsible-party-id"] as? Int
+		responsiblePartyId = unwrapIdValue(dictionary["responsible-party-id"])
 		creatorLastname = dictionary["creator-lastname"] as? String
 		hasReminders = dictionary["has-reminders"] as? String
 		todoListName = dictionary["todo-list-name"] as? String
@@ -101,7 +101,7 @@ public class TodoItem: Model {
 		privateValue = dictionary["private"] as? Int
 		responsiblePartySummary = dictionary["responsible-party-summary"] as? String
 		status = dictionary["status"] as? String
-		todoListId = dictionary["todo-list-id"] as? String
+		todoListId = unwrapIdValue(dictionary["todo-list-id"])
         if (dictionary["predecessor"] != nil) { predecessor = Predecessor.modelsFromDictionaryArray(array: dictionary["predecessor"] as! NSArray) }
 		if (dictionary["parentTask"] != nil) { parentTask = ParentTask(dictionary: dictionary["parentTask"] as! NSDictionary) }
 		content = dictionary["content"] as? String
@@ -115,7 +115,7 @@ public class TodoItem: Model {
 		priority = dictionary["priority"] as? String
 		responsiblePartyFirstname = dictionary["responsible-party-firstname"] as? String
 		viewEstimatedTime = dictionary["viewEstimatedTime"] as? String
-		responsiblePartyIds = dictionary["responsible-party-ids"] as? String
+		responsiblePartyIds = unwrapIdValue(dictionary["responsible-party-ids"])
 		responsiblePartyNames = dictionary["responsible-party-names"] as? String
 		tasklistLockdownId = dictionary["tasklist-lockdownId"] as? String
 		canLogTime = dictionary["canLogTime"] as? String

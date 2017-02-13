@@ -41,13 +41,13 @@ public class Activity: Model {
         super.init(dictionary: dictionary)
         
         projectId = dictionary["project-id"] as? String
-        itemId = dictionary["itemid"] as? String
+        itemId = unwrapIdValue(dictionary["itemid"])
         todoListName = dictionary["todo-list-name"] as? String
         fromUserAvatarUrl = dictionary["from-user-avatar-url"] as? String
         descriptionValue = dictionary["description"] as? String
         forUsername = dictionary["forusername"] as? String
         publicInfo = dictionary["publicinfo"] as? String
-        forUserId = dictionary["foruserid"] as? String
+        forUserId = unwrapIdValue(dictionary["foruserid"])
         itemLink = dictionary["itemlink"] as? String
         datetime = dictionary["datetime"] as? String
         activityType = dictionary["activitytype"] as? String
@@ -55,7 +55,7 @@ public class Activity: Model {
         link = dictionary["link"] as? String
         extraDescription = dictionary["extradescription"] as? String
         isPrivate = dictionary["isprivate"] as? Int
-        id = dictionary["id"] as? String
+        id = unwrapIdValue(dictionary["id"])
         dueDate = dictionary["due-date"] as? Int
         fromUsername = dictionary["fromusername"] as? String
         type = dictionary["type"] as? String

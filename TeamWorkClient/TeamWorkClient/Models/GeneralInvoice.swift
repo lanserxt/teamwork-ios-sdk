@@ -43,26 +43,26 @@ public class GeneralInvoice: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? String
-		exportedByUserId = dictionary["exported-by-user-id"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
+		exportedByUserId = unwrapIdValue(dictionary["exported-by-user-id"])
 		createdByUserFirstname = dictionary["created-by-user-firstname"] as? String
 		description = dictionary["description"] as? String
 		fixedCost = dictionary["fixed-cost"] as? String
 		status = dictionary["status"] as? String
 		dateCreated = dictionary["date-created"] as? String
 		exportedByUserLastname = dictionary["exported-by-user-lastname"] as? String
-		companyId = dictionary["company-id"] as? String
+		companyId = unwrapIdValue(dictionary["company-id"])
 		number = dictionary["number"] as? String
 		exportedByUserFirstname = dictionary["exported-by-user-firstname"] as? String
 		poNumber = dictionary["po-number"] as? String
 		projectName = dictionary["project-name"] as? String
 		displayDate = dictionary["display-date"] as? Int
 		exportedDate = dictionary["exported-date"] as? String
-		createdByUserId = dictionary["created-by-user-id"] as? String
-		updateByUserId = dictionary["update-by-user-id"] as? String
+		createdByUserId = unwrapIdValue(dictionary["created-by-user-id"])
+		updateByUserId = unwrapIdValue(dictionary["update-by-user-id"])
 		createdByUserLastname = dictionary["created-by-user-lastname"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		dateUpdated = dictionary["date-updated"] as? String
 		editedByUserLastname = dictionary["edited-by-user-lastname"] as? String
 		editedByUserFirstname = dictionary["edited-by-user-firstname"] as? String

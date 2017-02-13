@@ -48,8 +48,8 @@ public class SingleInvoice: Model {
         
         super.init(dictionary: dictionary)
         
-        exportedByUserId = dictionary["exported-by-user-id"] as? String
-        projectId = dictionary["project-id"] as? String
+        exportedByUserId = unwrapIdValue(dictionary["exported-by-user-id"])
+        projectId = unwrapIdValue(dictionary["project-id"])
         createdByUserFirstname = dictionary["created-by-user-firstname"] as? String
         fixedCost = dictionary["fixed-cost"] as? String
         status = dictionary["status"] as? String
@@ -60,15 +60,15 @@ public class SingleInvoice: Model {
         poNumber = dictionary["po-number"] as? String
         exportedByUserFirstname = dictionary["exported-by-user-firstname"] as? String
         if (dictionary["expenses"] != nil) { expenses = Expense.modelsFromDictionaryArray(array: (dictionary["expenses"] as? NSArray)!) }
-        updateByUserId = dictionary["update-by-user-id"] as? String
-        createdByUserId = dictionary["created-by-user-id"] as? String
-        id = dictionary["id"] as? String
+        updateByUserId = unwrapIdValue(dictionary["update-by-user-id"])
+        createdByUserId = unwrapIdValue(dictionary["created-by-user-id"])
+        id = unwrapIdValue(dictionary["id"])
         companyName = dictionary["company-name"] as? String
         editedByUserFirstname = dictionary["edited-by-user-firstname"] as? String
         totalTimeDecimal = dictionary["total-time-decimal"] as? Double
         totalCost = dictionary["total-cost"] as? Double
         description = dictionary["description"] as? String
-        companyId = dictionary["company-id"] as? String
+        companyId = unwrapIdValue(dictionary["company-id"])
         exportedDate = dictionary["exported-date"] as? String
         displayDate = dictionary["display-date"] as? Int
         projectName = dictionary["project-name"] as? String

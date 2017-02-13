@@ -34,7 +34,7 @@ public class Milestone: Model {
 	public var description : String?
 	public var responsiblePartyFirstname : String?
 	public var completerFirstname : String?
-	public var responsiblePartyIds : Int?
+	public var responsiblePartyIds : String?
 	public var responsiblePartyNames : String?
 	public var responsiblePartyLastname : String?
 	public var companyId : String?
@@ -48,9 +48,9 @@ public class Milestone: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
 		canComplete = dictionary["canComplete"] as? String
-		responsiblePartyId = dictionary["responsible-party-id"] as? String
+		responsiblePartyId = unwrapIdValue(dictionary["responsible-party-id"])
 		completerId = dictionary["completer-id"] as? String
 		commentsCount = dictionary["comments-count"] as? Int
 		privateValue = dictionary["private"] as? String
@@ -61,7 +61,7 @@ public class Milestone: Model {
 		responsiblePartyType = dictionary["responsible-party-type"] as? String
 		isprivate = dictionary["isprivate"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		completed = dictionary["completed"] as? String
 		reminder = dictionary["reminder"] as? String
@@ -69,11 +69,11 @@ public class Milestone: Model {
 		description = dictionary["description"] as? String
 		responsiblePartyFirstname = dictionary["responsible-party-firstname"] as? String
 		completerFirstname = dictionary["completer-firstname"] as? String
-		responsiblePartyIds = dictionary["responsible-party-ids"] as? Int
+		responsiblePartyIds = unwrapIdValue(dictionary["responsible-party-ids"])
 		responsiblePartyNames = dictionary["responsible-party-names"] as? String
 		responsiblePartyLastname = dictionary["responsible-party-lastname"] as? String
-		companyId = dictionary["company-id"] as? String
-		creatorId = dictionary["creator-id"] as? String
+		companyId = unwrapIdValue(dictionary["company-id"])
+		creatorId = unwrapIdValue(dictionary["creator-id"])
 		completerLastname = dictionary["completer-lastname"] as? String
 		projectName = dictionary["project-name"] as? String
 		deadline = dictionary["deadline"] as? Int

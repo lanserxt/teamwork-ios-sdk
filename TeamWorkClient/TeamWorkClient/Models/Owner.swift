@@ -22,7 +22,7 @@ public class Owner: Model {
         super.init(dictionary: dictionary)
 
 		firstName = dictionary["first-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		lastName = dictionary["last-name"] as? String
 	}
 

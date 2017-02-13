@@ -47,16 +47,16 @@ public class FullPost: Model {
         
         super.init(dictionary: dictionary)
 
-		projectId = dictionary["project-id"] as? String
+		projectId = unwrapIdValue(dictionary["project-id"])
 		authorFirstName = dictionary["author-first-name"] as? String
-		milestoneId = dictionary["milestone-id"] as? String
+		milestoneId = unwrapIdValue(dictionary["milestone-id"])
 		numNotified = dictionary["numNotified"] as? Int
 		isRead = dictionary["isRead"] as? Int
 		privateValue = dictionary["private"] as? Int
 		commentsCount = dictionary["comments-count"] as? Int
 		authorAvatarUrl = dictionary["author-avatar-url"] as? String
 		authorLastName = dictionary["author-last-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		useTextile = dictionary["use-textile"] as? String
 		contentType = dictionary["content-type"] as? String
@@ -65,14 +65,14 @@ public class FullPost: Model {
 		userDisplayPostedTime = dictionary["user-display-posted-time"] as? String
 		messageStatus = dictionary["message-status"] as? String
 		attachmentsCount = dictionary["attachments-count"] as? Int
-		postId = dictionary["post-id"] as? String
-		categoryId = dictionary["category-id"] as? String
+		postId = unwrapIdValue(dictionary["post-id"])
+		categoryId = unwrapIdValue(dictionary["category-id"])
 		htmlBody = dictionary["html-body"] as? String
 		postedOn = dictionary["posted-on"] as? String
 		body = dictionary["body"] as? String
         attachments = dictionary["attachments"] as? Array<String>
 		//if (dictionary["attachments"] != nil) { attachments = Attachments.modelsFromDictionaryArray(dictionary["attachments"] as! NSArray) }
-		authorId = dictionary["author-id"] as? String
+		authorId = unwrapIdValue(dictionary["author-id"])
 		postStatus = dictionary["post-status"] as? String
 		displayBody = dictionary["display-body"] as? String
 		title = dictionary["title"] as? String

@@ -19,7 +19,7 @@ public class Predecessor: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		type = dictionary["type"] as? String
 	}
 

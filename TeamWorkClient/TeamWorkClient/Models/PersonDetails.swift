@@ -54,17 +54,17 @@ public class PersonDetails: Model {
 
         super.init(dictionary: dictionary)
 		administrator = dictionary["administrator"] as? String
-		pid = dictionary["pid"] as? String
+		pid = unwrapIdValue(dictionary["pid"])
 		siteOwner = dictionary["site-owner"] as? String
 		twitter = dictionary["twitter"] as? String
 		phoneNumberHome = dictionary["phone-number-home"] as? String
 		lastName = dictionary["last-name"] as? String
 		emailAddress = dictionary["email-address"] as? String
 		profile = dictionary["profile"] as? String
-		userUUID = dictionary["userUUID"] as? String
+		userUUID = unwrapIdValue(dictionary["userUUID"])
 		privateNotes = dictionary["private-notes"] as? String
 		userName = dictionary["user-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		companyName = dictionary["company-name"] as? String
 		lastChangedOn = dictionary["last-changed-on"] as? String
 		phoneNumberOffice = dictionary["phone-number-office"] as? String
@@ -79,7 +79,7 @@ public class PersonDetails: Model {
 		imHandle = dictionary["im-handle"] as? String
 		createdAt = dictionary["created-at"] as? String
 		phoneNumberOfficeExt = dictionary["phone-number-office-ext"] as? String
-		companyId = dictionary["company-id"] as? String
+		companyId = unwrapIdValue(dictionary["company-id"])
 		hasAccessToNewProjects = dictionary["has-access-to-new-projects"] as? String
 		phoneNumberFax = dictionary["phone-number-fax"] as? String
 		avatarUrl = dictionary["avatar-url"] as? String

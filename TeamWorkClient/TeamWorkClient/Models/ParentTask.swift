@@ -20,7 +20,7 @@ public class ParentTask: Model {
 
         super.init(dictionary: dictionary)
 		content = dictionary["content"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

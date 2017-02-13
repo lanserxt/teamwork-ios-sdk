@@ -31,17 +31,17 @@ public class TaskList: Model {
 	required public init?(dictionary: NSDictionary) {
 
         super.init(dictionary: dictionary)
-		projectid = dictionary["projectid"] as? String
+		projectid = unwrapIdValue(dictionary["projectid"])
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
-		milestoneId = dictionary["milestone-id"] as? String
+		milestoneId = unwrapIdValue(dictionary["milestone-id"])
 		uncompletedCount = dictionary["uncompleted-count"] as? Int
 		complete = dictionary["complete"] as? String
 		privateValue = dictionary["private"] as? Int
 		overdueCount = dictionary["overdue-count"] as? Int
 		projectName = dictionary["project-name"] as? String
 		pinned = dictionary["pinned"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		position = dictionary["position"] as? Int
 		completedCount = dictionary["completed-count"] as? Int
 		if (dictionary["milestone"] != nil) { milestone = Milestone(dictionary: dictionary["milestone"] as! NSDictionary) }

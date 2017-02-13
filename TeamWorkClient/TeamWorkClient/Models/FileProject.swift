@@ -25,7 +25,7 @@ public class FileProject: Model {
 		company = dictionary["company"] as? String
 		name = dictionary["name"] as? String
         if (dictionary["files"] != nil) { files = File.modelsFromDictionaryArray(array: dictionary["files"] as! NSArray) }
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

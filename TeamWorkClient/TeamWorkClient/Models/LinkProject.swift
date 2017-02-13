@@ -22,7 +22,7 @@ public class LinkProject: Model {
         super.init(dictionary: dictionary)
         if (dictionary["links"] != nil) { links = Link.modelsFromDictionaryArray(array: dictionary["links"] as! NSArray) }
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 	}
 
 		

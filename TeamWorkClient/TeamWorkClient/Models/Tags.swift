@@ -22,7 +22,7 @@ public class Tag: Model {
         super.init(dictionary: dictionary)
 
 		name = dictionary["name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		color = dictionary["color"] as? String
 	}
 

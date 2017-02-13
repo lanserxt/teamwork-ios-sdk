@@ -17,10 +17,10 @@ public class File: Model {
 	public var uploadedByUserLastName : String?
 	public var name : String?
 	public var uploadedDate : String?
-	public var uploadedByUserId : Int?
+	public var uploadedByUserId : String?
 	public var description : String?
 	public var commentsCount : Int?
-	public var versionId : Int?
+	public var versionId : String?
 	public var privateValue : Int?
 	public var downloadUrl : String?
 	public var categoryId : String?
@@ -41,17 +41,17 @@ public class File: Model {
 		uploadedByUserLastName = dictionary["uploaded-by-user-last-name"] as? String
 		name = dictionary["name"] as? String
 		uploadedDate = dictionary["uploaded-date"] as? String
-		uploadedByUserId = dictionary["uploaded-by-userId"] as? Int
+		uploadedByUserId = unwrapIdValue(dictionary["uploaded-by-userId"])
 		description = dictionary["description"] as? String
 		commentsCount = dictionary["comments-count"] as? Int
-		versionId = dictionary["version-id"] as? Int
+		versionId = unwrapIdValue(dictionary["version-id"])
 		privateValue = dictionary["private"] as? Int
 		downloadUrl = dictionary["download-URL"] as? String
-		categoryId = dictionary["category-id"] as? String
+		categoryId = unwrapIdValue(dictionary["category-id"])
 		projectName = dictionary["project-name"] as? String
 		version = dictionary["version"] as? Int
 		originalName = dictionary["originalName"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		size = dictionary["size"] as? Int
 		fileSource = dictionary["file-source"] as? String
 		uploadedByUserFirstName = dictionary["uploaded-by-user-first-name"] as? String

@@ -24,7 +24,7 @@ public class Role: Model {
         if (dictionary["users"] != nil) { users = User.modelsFromDictionaryArray(array: dictionary["users"] as! NSArray) }
 		name = dictionary["name"] as? String
 		description = dictionary["description"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {

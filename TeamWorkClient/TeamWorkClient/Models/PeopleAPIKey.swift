@@ -28,10 +28,10 @@ public class PeopleAPIKey: Model {
 		userAPIKey = dictionary["userAPIKey"] as? String
 		firstName = dictionary["first-name"] as? String
 		companyName = dictionary["company-name"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		inOwnerCompany = dictionary["in-owner-company"] as? String
 		lastName = dictionary["last-name"] as? String
-		companyId = dictionary["companyId"] as? String
+		companyId = unwrapIdValue(dictionary["companyId"])
 		emailAddress = dictionary["email-address"] as? String
 	}
 

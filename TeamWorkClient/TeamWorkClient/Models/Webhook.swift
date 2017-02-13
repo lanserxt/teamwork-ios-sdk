@@ -24,7 +24,7 @@ public class Webhook: Model {
         super.init(dictionary: dictionary)
 
 		event = dictionary["event"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		status = dictionary["status"] as? String
 		url = dictionary["url"] as? String
 		validated = dictionary["validated"] as? Int

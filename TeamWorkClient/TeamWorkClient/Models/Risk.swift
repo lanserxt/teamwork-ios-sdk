@@ -38,7 +38,7 @@ public class Risk: Model {
 
         super.init(dictionary: dictionary)
 		lastChangedOn = dictionary["lastChangedOn"] as? String
-		createdByUserId = dictionary["createdByUserId"] as? String
+		createdByUserId =  unwrapIdValue(dictionary["createdByUserId"])
 		impact = dictionary["impact"] as? String
 		createdByUserLastName = dictionary["createdByUserLastName"] as? String
 		impactSchedule = dictionary["impactSchedule"] as? Int
@@ -53,10 +53,10 @@ public class Risk: Model {
 		result = dictionary["result"] as? Int
 		probability = dictionary["probability"] as? String
 		createdOn = dictionary["createdOn"] as? String
-		id = dictionary["id"] as? String
+		id = unwrapIdValue(dictionary["id"])
 		lastChangedByUserLastName = dictionary["lastChangedByUserLastName"] as? String
 		impactCost = dictionary["impactCost"] as? Int
-		lastChangedByUserId = dictionary["lastChangedByUserId"] as? String
+		lastChangedByUserId = unwrapIdValue(dictionary["lastChangedByUserId"])
 	}
 
 	public override func dictionaryRepresentation() -> NSDictionary {
