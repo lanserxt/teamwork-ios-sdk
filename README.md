@@ -1,7 +1,7 @@
 TeamWork iOS SDK
 ===============
 
-Plain and simple UIView category that adds overlay layer with specific color the the sublayers of the UIView.
+SWIFT API wrapper for [TeamWork API](http://developer.teamwork.com).
 
 ##Requirements
 
