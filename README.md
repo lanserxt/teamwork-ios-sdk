@@ -39,11 +39,8 @@ class ViewController: UIViewController {
         apiClient.getAllProjects(urlParams: "status=ALL") { [weak self] (success, code, projects, error) in
             for project: Project in projects!{
                 print("Name: \(project.name!) id: \(project.id!)")
-                self?.getTasksForProjectId(project.id!)
             }
-        }
-        
+        }        
     }
-
 }
 ```
